@@ -9,16 +9,38 @@
     
 <style type="text/css">
     body{padding: 20px;background-color: #FFF; font: 76% "Trebuchet MS",Verdana,Arial,sans-serif}
-    div#nifty {border: solid}
-    div.keyevent { border: solid }
-/* #innerContainer { overflow: hidden; width: 1px; height: 1px; position: absolute; margin: 10em;}
-   #textbox {position: relative; left: -100em; top: -100em;}*/
+	#outerContainer { border: solid; width: 500px; height: 200px; margin: 20px;  }
+	#firstBox { border: solid blue; width: 200px; height: 10em; margin: 10px; }
+	#currentText { border: solid red 1px; width: 90%; height: 1.5em; position: relative; top: 8em; left: 5%; right: 5%; }
+	div#drop_down {
+      position:absolute;
+      width:250px;
+      background-color:white;
+      border:1px solid #888;
+      margin:0px;
+      padding:0px;
+    }
+    div#drop_down ul {
+      list-style-type:none;
+      margin:0px;
+      padding:0px;
+    }
+    div#drop_down ul li.selected { background-color: #ffb;}
+    div#drop_down ul li {
+      list-style-type:none;
+      display:block;
+      margin:0;
+      padding:2px;
+      height:32px;
+      cursor:pointer;
+    }
 </style>
 
 <link href="default.css" rel="stylesheet" title="Default" type="text/css" />
     
 <script src="javascript/prototype.js" type="text/javascript"></script>
 <script src="javascript/scriptaculous.js" type="text/javascript"></script>
+<script src="javascript/autocompleteex.js" type="text/javascript"></script>
 <script src="javascript/focuslock.js" type="text/javascript"></script>
 <script src="javascript/kbdhandler.js" type="text/javascript"></script>
 
@@ -26,19 +48,31 @@
 
 <body lang="en">
 
-<div id="nifty">
-    Press some keys:<input type="button" value="Clear" onclick="$('keyEvents').innerHTML = ''; $('debug').innerHTML = ''" />
-	<div id="currentText"></div>
-	<div id="controlKeys"></div>
-    <div id="keyEvents" style="display: none"></div>
+<div id="outerContainer">
+	<div id="firstBox">
+		<div id="currentText"></div>
+	</div>
+	<div id="drop_down" style="display: none"></div>
 </div>
 
+<div id="controlKeys"></div>
+<div id="keyEvents" style="display: none"></div>
 <div id="debug" style="display: none"></div>
 
 <script language="JavaScript">
-var kbd = new KeyboardHandler('nifty', textChanged, controlKeys);
+var kbd = new KeyboardHandler('firstBox', textChanged, controlKeys);
 
 kbd.lockFocus();
+
+var ac = new Autocompleter.Local('firstBox', 
+						'drop_down',
+						['ABBA', 'AC/DC', 'Aerosmith', 'America', 'Bay City Rollers', 'Black Sabbath', 'Boston', 'David Bowie', 'Can', 'The Carpenters', 'Chicago', 'The Commodores', 'Crass', 'Deep Purple', 'The Doobie Brothers', 'Eagles', 'Fleetwood Mac', 'Haciendo Punto en Otro Son', 'Heart', 'Iggy Pop and the Stooges', 'Journey', 'Judas Priest', 'KC and the Sunshine Band', 'Kiss', 'Kraftwerk', 'Led Zeppelin', 'Lindisfarne (band)', 'Lipps, Inc', 'Lynyrd Skynyrd', 'Pink Floyd', 'Queen', 'Ramones', 'REO Speedwagon', 'Rhythm Heritage', 'Rush', 'Sex Pistols', 'Slade', 'Steely Dan', 'Stillwater', 'Styx', 'Supertramp', 'Sweet', 'Three Dog Night', 'The Village People', 'Wings (fronted by former Beatle Paul McCartney)', 'Yes'],
+						{
+							updateElement: function(selectedElement) {
+								var text = Element.collectTextNodesIgnoreClass(selectedElement, 'informal');
+								kbd.setText(text);
+							}
+						});
 
 function textChanged(handler, oldText, newText) {
 	$('currentText').innerHTML = newText.escapeHTML();
@@ -52,7 +86,8 @@ function controlKeys(handler, shift, control, alt, meta, keycode) {
 		"Keycode: " + keycode;	 
 
 	$('controlKeys').innerHTML = msg;
-	return false;
+
+	ac.feedKeyPress(keycode);
 }
 </script>
 

@@ -2,7 +2,8 @@
 <Project
 	Version="10.0"
 	VendorName="SlickEdit"
-	WorkingDir=".">
+	WorkingDir="."
+	VCSProject="Subversion:">
 	<Config
 		Name="Release"
 		OutputFile=""
@@ -67,6 +68,7 @@
 	</CustomFolders>
 	<Files AutoFolders="DirectoryView">
 		<Folder Name="javascript">
+			<F N="javascript/autocompleteex.js"/>
 			<F N="javascript/builder.js"/>
 			<F N="javascript/controls.js"/>
 			<F N="javascript/dragdrop.js"/>

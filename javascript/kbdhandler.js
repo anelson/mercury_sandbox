@@ -1,5 +1,6 @@
 var KeyboardHandler = Class.create();
-KeyboardHandler.DEBUG = false;
+KeyboardHandler.DEBUG = true;
+KeyboardHandler.DEBUG_TEXTBOX = false;
 
 KeyboardHandler.KEY_BACKSPACE        = 8;
 KeyboardHandler.KEY_TAB              = 9;
@@ -127,7 +128,7 @@ KeyboardHandler.prototype = {
 		this.dummyTextBox = $(txtBoxId);
 		var containerDiv = $(containerId);
 
-		if (!KeyboardHandler.DEBUG) {
+		if (!KeyboardHandler.DEBUG_TEXTBOX) {
 			//Modify the DIV containing the text box to make it one practically invisible,
 			// and obscure the text box inside it
 			Element.setStyle(containerDiv,
@@ -149,6 +150,8 @@ KeyboardHandler.prototype = {
 							 });
 		}
 
+		this.targetElement.kbdHandler = this;
+
 		//Add event handlers to track when the dummy text box gains and loses
 		//focus.  This will determine whether the target element will receive keyboard
 		//events through the keyboard handler, and thus it's 'focus'.  Add the 'kbd-focus'
@@ -169,6 +172,7 @@ KeyboardHandler.prototype = {
 
 		//Initialize the cached text box value
 		this.lastTextBoxValue = "";
+		this.targetElement.value = "";
 
 		this.installDefaultControlKeyHandlers();
 	},
@@ -202,6 +206,7 @@ KeyboardHandler.prototype = {
 	 */
 	setText : function(newValue) {
 		this.dummyTextBox.value = newValue;
+		this.onPossibleTextBoxChange();
 	},
 
 	/**
@@ -269,9 +274,10 @@ KeyboardHandler.prototype = {
 		 // the raw code from the keyboard and puts it in keyCode.  So, we'll use 'charCode' if it's there; 
 		 // if not fall back to keyCode.
 		 var keyCode = e.charCode ? e.charCode : e.keyCode;
+		 var retval = true;
 		 
 		 if (controlKey) {
-			 var retval = this.processNonPrintableKeyPress(e.shiftKey,
+			 retval = this.processNonPrintableKeyPress(e.shiftKey,
 												  e.ctrlKey,
 												  e.altKey,
 												  e.metaKey,
@@ -289,8 +295,9 @@ KeyboardHandler.prototype = {
 			 this.dump('Last key press potentially a text modifier; queueing check for text change');
 			 
 			 setTimeout(this.onPossibleTextBoxChange.bind(this), 1);
-			 return true;
 		 }
+
+		 return retval;
 	},
 
 	onPossibleTextBoxChange : function() {
@@ -306,9 +313,12 @@ KeyboardHandler.prototype = {
 			 if (retval != false) {
 				 this.dump('Keeping new value');
 				 this.lastTextBoxValue = this.dummyTextBox.value;
+
+				 //Also store the text the 'value' property of the target element
+				 this.targetElement.value = this.lastTextBoxValue;
 			 } else {
 				 this.dump('Rejecting new value');
-				 this.dummyTextBox = this.lastTextBoxValue;
+				 this.dummyTextBox.value = this.lastTextBoxValue;
 			 }
 		 }
 	},
@@ -388,8 +398,9 @@ KeyboardHandler.prototype = {
 		 //All of these will cause unanticipated behavior.
 		 //
 		 //That said, brave/stupid users of the code can return 'true' in their callbacks
-		 //to allow control characters to proceed.  'false' is the default.
-		var retval = false;
+		 //to allow control characters to proceed.  The default is to only pass those keys that
+		 //are necessary for basic text manipulation (backspace being the obvious example)
+		var retval = (shift == false && ctrl == false && alt == false && meta == false && charCode == KeyboardHandler.KEY_BACKSPACE);
 
 		//Check for a specific callback
 		var key = this.computeControlKeyHashKey(shift, ctrl, alt, meta, charCode);
