@@ -1,0 +1,21 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+childless:
+  id: 1
+  character: "a"
+  
+parent:
+  id: 2
+  character: "f"
+  
+child1:
+  id: 3
+  character: "o"
+  parent_title_char_id: 2
+  
+child2:
+  id: 4
+  character: "i"
+  parent_title_char_id: 2
+  
+

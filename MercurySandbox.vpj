@@ -67,23 +67,124 @@
 			Filters="*.c;*.C;*.cc;*.cpp;*.cp;*.cxx;*.prg;*.pas;*.dpr;*.asm;*.s;*.bas;*.java;*.cs;*.sc;*.e;*.cob;*.html;*.rc;*.tcl;*.py;*.pl"/>
 	</CustomFolders>
 	<Files AutoFolders="DirectoryView">
+		<Folder Name="app">
+			<Folder Name="controllers">
+				<F N="app/controllers/application.rb"/>
+			</Folder>
+			<Folder Name="helpers">
+				<F N="app/helpers/application_helper.rb"/>
+			</Folder>
+			<Folder Name="models">
+				<F N="app/models/item.rb"/>
+				<F N="app/models/title_char.rb"/>
+			</Folder>
+		</Folder>
+		<Folder Name="config">
+			<Folder Name="environments">
+				<F N="config/environments/development.rb"/>
+				<F N="config/environments/production.rb"/>
+				<F N="config/environments/test.rb"/>
+			</Folder>
+			<F N="config/boot.rb"/>
+			<F N="config/database.yml"/>
+			<F N="config/environment.rb"/>
+			<F N="config/routes.rb"/>
+		</Folder>
+		<Folder Name="db">
+			<Folder Name="migrate">
+				<F N="db/migrate/001_create_items.rb"/>
+				<F N="db/migrate/002_create_title_chars.rb"/>
+				<F N="db/migrate/003_create_title_char_ancestors.rb"/>
+				<F N="db/migrate/004_create_item_title_chars.rb"/>
+			</Folder>
+			<F N="db/schema.rb"/>
+		</Folder>
+		<Folder Name="doc">
+			<F N="doc/README_FOR_APP"/>
+		</Folder>
 		<Folder Name="javascript">
 			<F N="javascript/autocompleteex.js"/>
 			<F N="javascript/builder.js"/>
 			<F N="javascript/controls.js"/>
 			<F N="javascript/dragdrop.js"/>
 			<F N="javascript/effects.js"/>
+			<F N="javascript/focuslock.bak"/>
 			<F N="javascript/focuslock.js"/>
+			<F N="javascript/kbdhandler.bak"/>
 			<F N="javascript/kbdhandler.js"/>
 			<F N="javascript/prototype.js"/>
 			<F N="javascript/scriptaculous.js"/>
 			<F N="javascript/slider.js"/>
 			<F N="javascript/unittest.js"/>
 		</Folder>
-		<F N="autocompletetest.html"/>
+		<Folder Name="log">
+			<F N="log/development.log"/>
+			<F N="log/production.log"/>
+			<F N="log/server.log"/>
+			<F N="log/test.log"/>
+		</Folder>
+		<Folder Name="public">
+			<Folder Name="images">
+				<F N="public/images/rails.png"/>
+			</Folder>
+			<Folder Name="javascripts">
+				<F N="public/javascripts/application.js"/>
+				<F N="public/javascripts/controls.js"/>
+				<F N="public/javascripts/dragdrop.js"/>
+				<F N="public/javascripts/effects.js"/>
+				<F N="public/javascripts/prototype.js"/>
+			</Folder>
+			<F N="public/.htaccess"/>
+			<F N="public/404.html"/>
+			<F N="public/500.html"/>
+			<F N="public/dispatch.cgi"/>
+			<F N="public/dispatch.fcgi"/>
+			<F N="public/dispatch.rb"/>
+			<F N="public/favicon.ico"/>
+			<F N="public/index.html"/>
+			<F N="public/robots.txt"/>
+		</Folder>
+		<Folder Name="script">
+			<Folder Name="performance">
+				<F N="script/performance/benchmarker"/>
+				<F N="script/performance/profiler"/>
+			</Folder>
+			<Folder Name="process">
+				<F N="script/process/reaper"/>
+				<F N="script/process/spawner"/>
+			</Folder>
+			<F N="script/about"/>
+			<F N="script/breakpointer"/>
+			<F N="script/console"/>
+			<F N="script/destroy"/>
+			<F N="script/generate"/>
+			<F N="script/plugin"/>
+			<F N="script/runner"/>
+			<F N="script/server"/>
+		</Folder>
+		<Folder Name="test">
+			<Folder Name="fixtures">
+				<F N="test/fixtures/items.yml"/>
+				<F N="test/fixtures/title_chars.yml"/>
+			</Folder>
+			<Folder Name="unit">
+				<F N="test/unit/item_test.rb"/>
+				<F N="test/unit/item_title_char_test.rb"/>
+				<F N="test/unit/title_char_test.rb"/>
+			</Folder>
+			<F N="test/test_helper.rb"/>
+		</Folder>
 		<F N="build_catalog.rb"/>
+		<F N="catalog.db"/>
 		<F N="default.css"/>
+		<F N="nifty.js"/>
+		<F N="niftyCorners.css"/>
+		<F N="niftylayout.css"/>
+		<F N="prefs"/>
+		<F N="Rakefile"/>
+		<F N="README"/>
 		<F N="schema.sql"/>
 		<F N="search_catalog.rb"/>
+		<F N="test_search.sql"/>
 	</Files>
 </Project>

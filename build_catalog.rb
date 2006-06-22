@@ -27,7 +27,6 @@ def process_dir(db, path, parent_id)
     
 end
 
-
 def create_entry(db, path, parent_id)
     title = File.basename(path, ".*")
 

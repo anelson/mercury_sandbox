@@ -1,0 +1,350 @@
+  [4;36;1mSQL (0.000000)[0m   [0;1mPRAGMA table_info(items)[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mPRAGMA table_info(items)[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mPRAGMA table_info(items)[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mPRAGMA table_info(items)[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mPRAGMA table_info(items)[0m
+  [4;35;1mSQL (0.000000)[0m   [0mSELECT count(*) AS count_all FROM items WHERE (items.parent_item_id = NULL) [0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mSELECT count(*) AS count_all FROM items WHERE (items.parent_item_id = NULL) [0m
+  [4;36;1mSQL (0.015000)[0m   [0;1mPRAGMA table_info(items)[0m
+  [4;35;1mSQL (0.000000)[0m   [0mSELECT count(*) AS count_all FROM items WHERE (items.parent_item_id = NULL) [0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mSELECT count(*) AS count_all FROM items WHERE (items.parent_item_id = NULL) [0m
+  [4;35;1mSQL (0.000000)[0m   [0mSELECT count(*) AS count_all FROM items WHERE (items.parent_item_id = NULL) [0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mPRAGMA table_info(items)[0m
+  [4;35;1mSQL (0.000000)[0m   [0mSELECT count(*) AS count_all FROM items WHERE (items.parent_item_id = NULL) [0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mPRAGMA table_info(items)[0m
+  [4;35;1mSQL (0.000000)[0m   [0mSELECT count(*) AS count_all FROM items WHERE (items.parent_item_id = NULL) [0m
+  [4;36;1mItem Load (0.000000)[0m   [0;1mSELECT * FROM items WHERE (items.id = 1) LIMIT 1[0m
+  [4;35;1mSQL (0.000000)[0m   [0mPRAGMA table_info(items)[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mSELECT count(*) AS count_all FROM items WHERE (items.parent_item_id = 1) [0m
+  [4;35;1mSQL (0.000000)[0m   [0mSELECT count(*) AS count_all FROM items WHERE (items.parent_item_id = NULL) [0m
+  [4;36;1mItem Load (0.000000)[0m   [0;1mSELECT * FROM items WHERE (items.id = 2) LIMIT 1[0m
+  [4;36;1mItem Load (0.000000)[0m   [0;1mSELECT * FROM items WHERE (items.id = 1) LIMIT 1[0m
+  [4;35;1mSQL (0.000000)[0m   [0mPRAGMA table_info(items)[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mSELECT count(*) AS count_all FROM items WHERE (items.parent_item_id = 1) [0m
+  [4;35;1mSQL (0.000000)[0m   [0mSELECT count(*) AS count_all FROM items WHERE (items.parent_item_id = NULL) [0m
+  [4;36;1mItem Load (0.000000)[0m   [0;1mSELECT * FROM items WHERE (items.id = 2) LIMIT 1[0m
+  [4;35;1mSQL (0.000000)[0m   [0mSELECT count(*) AS count_all FROM items WHERE (items.parent_item_id = 2) [0m
+  [4;36;1mItem Load (0.000000)[0m   [0;1mSELECT * FROM items WHERE (items.id = 3) LIMIT 1[0m
+  [4;35;1mItem Load (0.000000)[0m   [0mSELECT * FROM items WHERE (items.id = 3 AND (items.parent_item_id = 2)) LIMIT 1[0m
+  [4;36;1mItem Load (0.016000)[0m   [0;1mSELECT * FROM items WHERE (items.id = 4) LIMIT 1[0m
+  [4;35;1mItem Load (0.000000)[0m   [0mSELECT * FROM items WHERE (items.id = 4 AND (items.parent_item_id = 2)) LIMIT 1[0m
+  [4;36;1mTitleChar Load (0.000000)[0m   [0;1mSELECT * FROM title_chars WHERE (title_chars.id = 1) LIMIT 1[0m
+  [4;35;1mSQL (0.000000)[0m   [0mPRAGMA table_info(title_chars)[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mSELECT count(*) AS count_all FROM title_chars WHERE (title_chars.parent_title_char_id = 1) [0m
+  [4;35;1mSQL (0.000000)[0m   [0mSELECT count(*) AS count_all FROM title_chars WHERE (title_chars.parent_title_char_id = NULL) [0m
+  [4;36;1mTitleChar Load (0.000000)[0m   [0;1mSELECT * FROM title_chars WHERE (title_chars.id = 2) LIMIT 1[0m
+  [4;35;1mSQL (0.000000)[0m   [0mSELECT count(*) AS count_all FROM title_chars WHERE (title_chars.parent_title_char_id = 2) [0m
+  [4;36;1mTitleChar Load (0.000000)[0m   [0;1mSELECT * FROM title_chars WHERE (title_chars.id = 3) LIMIT 1[0m
+  [4;35;1mTitleChar Load (0.000000)[0m   [0mSELECT * FROM title_chars WHERE (title_chars.id = 3 AND (title_chars.parent_title_char_id = 2)) LIMIT 1[0m
+  [4;36;1mTitleChar Load (0.000000)[0m   [0;1mSELECT * FROM title_chars WHERE (title_chars.id = 4) LIMIT 1[0m
+  [4;35;1mTitleChar Load (0.000000)[0m   [0mSELECT * FROM title_chars WHERE (title_chars.id = 4 AND (title_chars.parent_title_char_id = 2)) LIMIT 1[0m
+  [4;36;1mItem Load (0.000000)[0m   [0;1mSELECT * FROM items WHERE (items.id = 1) LIMIT 1[0m
+  [4;35;1mSQL (0.000000)[0m   [0mPRAGMA table_info(items)[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mSELECT count(*) AS count_all FROM items WHERE (items.parent_item_id = 1) [0m
+  [4;35;1mSQL (0.000000)[0m   [0mSELECT count(*) AS count_all FROM items WHERE (items.parent_item_id = NULL) [0m
+  [4;36;1mItem Load (0.000000)[0m   [0;1mSELECT * FROM items WHERE (items.id = 2) LIMIT 1[0m
+  [4;35;1mSQL (0.000000)[0m   [0mSELECT count(*) AS count_all FROM items WHERE (items.parent_item_id = 2) [0m
+  [4;36;1mItem Load (0.000000)[0m   [0;1mSELECT * FROM items WHERE (items.id = 3) LIMIT 1[0m
+  [4;35;1mItem Load (0.000000)[0m   [0mSELECT * FROM items WHERE (items.id = 3 AND (items.parent_item_id = 2)) LIMIT 1[0m
+  [4;36;1mItem Load (0.000000)[0m   [0;1mSELECT * FROM items WHERE (items.id = 4) LIMIT 1[0m
+  [4;35;1mItem Load (0.000000)[0m   [0mSELECT * FROM items WHERE (items.id = 4 AND (items.parent_item_id = 2)) LIMIT 1[0m
+  [4;36;1mItem Load (0.000000)[0m   [0;1mSELECT * FROM items WHERE (items.id = 1) LIMIT 1[0m
+  [4;35;1mSQL (0.015000)[0m   [0mPRAGMA table_info(items)[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mSELECT count(*) AS count_all FROM items WHERE (items.parent_item_id = 1) [0m
+  [4;35;1mSQL (0.000000)[0m   [0mSELECT count(*) AS count_all FROM items WHERE (items.parent_item_id = NULL) [0m
+  [4;36;1mItem Load (0.000000)[0m   [0;1mSELECT * FROM items WHERE (items.id = 2) LIMIT 1[0m
+  [4;35;1mSQL (0.000000)[0m   [0mSELECT count(*) AS count_all FROM items WHERE (items.parent_item_id = 2) [0m
+  [4;36;1mItem Load (0.000000)[0m   [0;1mSELECT * FROM items WHERE (items.id = 3) LIMIT 1[0m
+  [4;35;1mItem Load (0.000000)[0m   [0mSELECT * FROM items WHERE (items.id = 3 AND (items.parent_item_id = 2)) LIMIT 1[0m
+  [4;36;1mItem Load (0.000000)[0m   [0;1mSELECT * FROM items WHERE (items.id = 4) LIMIT 1[0m
+  [4;35;1mItem Load (0.000000)[0m   [0mSELECT * FROM items WHERE (items.id = 4 AND (items.parent_item_id = 2)) LIMIT 1[0m
+  [4;36;1mTitleChar Load (0.000000)[0m   [0;1mSELECT * FROM title_chars WHERE (title_chars.id = 1) LIMIT 1[0m
+  [4;35;1mSQL (0.000000)[0m   [0mPRAGMA table_info(title_chars)[0m
+  [4;36;1mSQL (0.016000)[0m   [0;1mSELECT count(*) AS count_all FROM title_chars WHERE (title_chars.parent_title_char_id = 1) [0m
+  [4;35;1mSQL (0.000000)[0m   [0mSELECT count(*) AS count_all FROM title_chars WHERE (title_chars.parent_title_char_id = NULL) [0m
+  [4;36;1mTitleChar Load (0.000000)[0m   [0;1mSELECT * FROM title_chars WHERE (title_chars.id = 2) LIMIT 1[0m
+  [4;35;1mSQL (0.000000)[0m   [0mSELECT count(*) AS count_all FROM title_chars WHERE (title_chars.parent_title_char_id = 2) [0m
+  [4;36;1mTitleChar Load (0.000000)[0m   [0;1mSELECT * FROM title_chars WHERE (title_chars.id = 3) LIMIT 1[0m
+  [4;35;1mTitleChar Load (0.000000)[0m   [0mSELECT * FROM title_chars WHERE (title_chars.id = 3 AND (title_chars.parent_title_char_id = 2)) LIMIT 1[0m
+  [4;36;1mTitleChar Load (0.000000)[0m   [0;1mSELECT * FROM title_chars WHERE (title_chars.id = 4) LIMIT 1[0m
+  [4;35;1mTitleChar Load (0.000000)[0m   [0mSELECT * FROM title_chars WHERE (title_chars.id = 4 AND (title_chars.parent_title_char_id = 2)) LIMIT 1[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mPRAGMA table_info(title_chars)[0m
+  [4;35;1mSQL (0.000000)[0m   [0mPRAGMA table_info(items)[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mPRAGMA table_info(title_chars)[0m
+  [4;35;1mSQL (0.000000)[0m   [0mPRAGMA table_info(items)[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mPRAGMA table_info(title_chars)[0m
+  [4;35;1mSQL (0.000000)[0m   [0mPRAGMA table_info(items)[0m
+  [4;36;1mSQL (0.016000)[0m   [0;1mPRAGMA table_info(title_chars)[0m
+  [4;35;1mSQL (0.000000)[0m   [0mPRAGMA table_info(items)[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mINSERT INTO title_chars ("parent_title_char_id", "character") VALUES(NULL, 'c')[0m
+  [4;35;1mSQL (0.000000)[0m   [0mINSERT INTO title_chars ("parent_title_char_id", "character") VALUES(5, 'e')[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mINSERT INTO items ("parent_item_id", "title", "path") VALUES(NULL, 'item 1', '/')[0m
+  [4;35;1mSQL (0.000000)[0m   [0mINSERT INTO items ("parent_item_id", "title", "path") VALUES(NULL, 'item 2', '/')[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mINSERT INTO items ("parent_item_id", "title", "path") VALUES(NULL, 'item 3', '/')[0m
+  [4;35;1mSQL (0.000000)[0m   [0mPRAGMA table_info(items_title_chars)[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mPRAGMA table_info(title_chars)[0m
+  [4;35;1mSQL (0.000000)[0m   [0mPRAGMA table_info(items)[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mINSERT INTO title_chars ("parent_title_char_id", "character") VALUES(NULL, 'c')[0m
+  [4;35;1mSQL (0.000000)[0m   [0mINSERT INTO title_chars ("parent_title_char_id", "character") VALUES(1, 'e')[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mINSERT INTO items ("parent_item_id", "title", "path") VALUES(NULL, 'item 1', '/')[0m
+  [4;35;1mSQL (0.000000)[0m   [0mINSERT INTO items ("parent_item_id", "title", "path") VALUES(NULL, 'item 2', '/')[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mINSERT INTO items ("parent_item_id", "title", "path") VALUES(NULL, 'item 3', '/')[0m
+  [4;35;1mSQL (0.000000)[0m   [0mPRAGMA table_info(items_title_chars)[0m
+  [4;36;1mItem Load (0.000000)[0m   [0;1mSELECT * FROM items INNER JOIN items_title_chars ON items.id = items_title_chars.item_id WHERE (items_title_chars.title_char_id = 1 ) [0m
+  [4;35;1mSQL (0.000000)[0m   [0mPRAGMA table_info(items_title_chars)[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mINSERT INTO items_title_chars ("title_char_id", "item_id", "id") VALUES (1, 1, 1)[0m
+  [4;35;1mSQL (0.000000)[0m   [0mPRAGMA table_info(items_title_chars)[0m
+  [4;36;1mTitleChar Load (0.000000)[0m   [0;1mSELECT * FROM title_chars INNER JOIN items_title_chars ON title_chars.id = items_title_chars.title_char_id WHERE (items_title_chars.item_id = 1 ) [0m
+  [4;35;1mSQL (0.000000)[0m   [0mPRAGMA table_info(items_title_chars)[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mSQLite3::SQLException: SQL logic error or missing database: INSERT INTO items_title_chars ("title_char_id", "item_id", "id") VALUES (1, 1, 1)[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mPRAGMA table_info(title_chars)[0m
+  [4;35;1mSQL (0.000000)[0m   [0mPRAGMA table_info(items)[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mINSERT INTO title_chars ("parent_title_char_id", "character") VALUES(NULL, 'c')[0m
+  [4;35;1mSQL (0.000000)[0m   [0mINSERT INTO title_chars ("parent_title_char_id", "character") VALUES(1, 'e')[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mINSERT INTO items ("parent_item_id", "title", "path") VALUES(NULL, 'item 1', '/')[0m
+  [4;35;1mSQL (0.000000)[0m   [0mINSERT INTO items ("parent_item_id", "title", "path") VALUES(NULL, 'item 2', '/')[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mINSERT INTO items ("parent_item_id", "title", "path") VALUES(NULL, 'item 3', '/')[0m
+  [4;35;1mSQL (0.000000)[0m   [0mPRAGMA table_info(items_title_chars)[0m
+  [4;36;1mItem Load (0.000000)[0m   [0;1mSELECT * FROM items INNER JOIN items_title_chars ON items.id = items_title_chars.item_id WHERE (items_title_chars.title_char_id = 1 ) [0m
+  [4;35;1mSQL (0.000000)[0m   [0mPRAGMA table_info(items_title_chars)[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mINSERT INTO items_title_chars ("title_char_id", "item_id") VALUES (1, 1)[0m
+  [4;35;1mSQL (0.000000)[0m   [0mPRAGMA table_info(items_title_chars)[0m
+  [4;36;1mTitleChar Load (0.000000)[0m   [0;1mSELECT * FROM title_chars INNER JOIN items_title_chars ON title_chars.id = items_title_chars.title_char_id WHERE (items_title_chars.item_id = 1 ) [0m
+  [4;35;1mSQL (0.000000)[0m   [0mPRAGMA table_info(items_title_chars)[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mSQLite3::SQLException: SQL logic error or missing database: INSERT INTO items_title_chars ("title_char_id", "item_id") VALUES (1, 1)[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mPRAGMA table_info(title_chars)[0m
+  [4;35;1mSQL (0.000000)[0m   [0mPRAGMA table_info(items)[0m
+  [4;36;1mSQL (0.016000)[0m   [0;1mINSERT INTO title_chars ("parent_title_char_id", "character") VALUES(NULL, 'c')[0m
+  [4;35;1mSQL (0.000000)[0m   [0mINSERT INTO title_chars ("parent_title_char_id", "character") VALUES(1, 'e')[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mINSERT INTO items ("parent_item_id", "title", "path") VALUES(NULL, 'item 1', '/')[0m
+  [4;35;1mSQL (0.000000)[0m   [0mINSERT INTO items ("parent_item_id", "title", "path") VALUES(NULL, 'item 2', '/')[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mINSERT INTO items ("parent_item_id", "title", "path") VALUES(NULL, 'item 3', '/')[0m
+  [4;35;1mSQL (0.000000)[0m   [0mPRAGMA table_info(items_title_chars)[0m
+  [4;36;1mItem Load (0.000000)[0m   [0;1mSELECT * FROM items INNER JOIN items_title_chars ON items.id = items_title_chars.item_id WHERE (items_title_chars.title_char_id = 1 ) [0m
+  [4;35;1mSQL (0.000000)[0m   [0mPRAGMA table_info(items_title_chars)[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mSQLite3::SQLException: SQL logic error or missing database: INSERT INTO items_title_chars ("title_char_id", "item_id") VALUES (1, 1)[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mPRAGMA table_info(title_chars)[0m
+  [4;35;1mSQL (0.000000)[0m   [0mPRAGMA table_info(items)[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mINSERT INTO title_chars ("parent_title_char_id", "character") VALUES(NULL, 'c')[0m
+  [4;35;1mSQL (0.000000)[0m   [0mINSERT INTO title_chars ("parent_title_char_id", "character") VALUES(1, 'e')[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mINSERT INTO items ("parent_item_id", "title", "path") VALUES(NULL, 'item 1', '/')[0m
+  [4;35;1mSQL (0.000000)[0m   [0mINSERT INTO items ("parent_item_id", "title", "path") VALUES(NULL, 'item 2', '/')[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mINSERT INTO items ("parent_item_id", "title", "path") VALUES(NULL, 'item 3', '/')[0m
+  [4;35;1mSQL (0.000000)[0m   [0mPRAGMA table_info(items_title_chars)[0m
+  [4;36;1mItem Load (0.000000)[0m   [0;1mSELECT * FROM items INNER JOIN items_title_chars ON items.id = items_title_chars.item_id WHERE (items_title_chars.title_char_id = 1 ) [0m
+  [4;35;1mSQL (0.000000)[0m   [0mPRAGMA table_info(items_title_chars)[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mSQLite3::SQLException: SQL logic error or missing database: INSERT INTO items_title_chars ("title_char_id", "item_id") VALUES (1, 1)[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mPRAGMA table_info(title_chars)[0m
+  [4;35;1mSQL (0.000000)[0m   [0mPRAGMA table_info(items)[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mINSERT INTO title_chars ("parent_title_char_id", "character") VALUES(NULL, 'c')[0m
+  [4;35;1mSQL (0.000000)[0m   [0mINSERT INTO title_chars ("parent_title_char_id", "character") VALUES(1, 'e')[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mINSERT INTO items ("parent_item_id", "title", "path") VALUES(NULL, 'item 1', '/')[0m
+  [4;35;1mSQL (0.000000)[0m   [0mINSERT INTO items ("parent_item_id", "title", "path") VALUES(NULL, 'item 2', '/')[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mINSERT INTO items ("parent_item_id", "title", "path") VALUES(NULL, 'item 3', '/')[0m
+  [4;35;1mSQL (0.000000)[0m   [0mPRAGMA table_info(items_title_chars)[0m
+  [4;36;1mItem Load (0.000000)[0m   [0;1mSELECT * FROM items INNER JOIN items_title_chars ON items.id = items_title_chars.item_id WHERE (items_title_chars.title_char_id = 1 ) [0m
+  [4;35;1mSQL (0.000000)[0m   [0mPRAGMA table_info(items_title_chars)[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mINSERT INTO items_title_chars ("title_char_id", "item_id") VALUES (1, 1)[0m
+  [4;35;1mSQL (0.000000)[0m   [0mPRAGMA table_info(items_title_chars)[0m
+  [4;36;1mTitleChar Load (0.000000)[0m   [0;1mSELECT * FROM title_chars INNER JOIN items_title_chars ON title_chars.id = items_title_chars.title_char_id WHERE (items_title_chars.item_id = 1 ) [0m
+  [4;35;1mSQL (0.000000)[0m   [0mPRAGMA table_info(items_title_chars)[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mINSERT INTO items_title_chars ("title_char_id", "item_id") VALUES (1, 2)[0m
+  [4;35;1mSQL (0.000000)[0m   [0mPRAGMA table_info(items_title_chars)[0m
+  [4;36;1mTitleChar Load (0.000000)[0m   [0;1mSELECT * FROM title_chars INNER JOIN items_title_chars ON title_chars.id = items_title_chars.title_char_id WHERE (items_title_chars.item_id = 2 ) [0m
+  [4;35;1mSQL (0.000000)[0m   [0mPRAGMA table_info(items_title_chars)[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mINSERT INTO items_title_chars ("title_char_id", "item_id") VALUES (1, 2)[0m
+  [4;35;1mSQL (0.000000)[0m   [0mPRAGMA table_info(items_title_chars)[0m
+  [4;36;1mItem Load (0.000000)[0m   [0;1mSELECT * FROM items INNER JOIN items_title_chars ON items.id = items_title_chars.item_id WHERE (items_title_chars.title_char_id = 2 ) [0m
+  [4;35;1mSQL (0.000000)[0m   [0mPRAGMA table_info(items_title_chars)[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mINSERT INTO items_title_chars ("title_char_id", "item_id") VALUES (2, 2)[0m
+  [4;35;1mSQL (0.000000)[0m   [0mPRAGMA table_info(items_title_chars)[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mINSERT INTO items_title_chars ("title_char_id", "item_id") VALUES (2, 2)[0m
+  [4;35;1mSQL (0.000000)[0m   [0mPRAGMA table_info(items_title_chars)[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mINSERT INTO items_title_chars ("title_char_id", "item_id") VALUES (2, 3)[0m
+  [4;35;1mSQL (0.000000)[0m   [0mPRAGMA table_info(items_title_chars)[0m
+  [4;36;1mTitleChar Load (0.000000)[0m   [0;1mSELECT * FROM title_chars INNER JOIN items_title_chars ON title_chars.id = items_title_chars.title_char_id WHERE (items_title_chars.item_id = 3 ) [0m
+  [4;35;1mSQL (0.000000)[0m   [0mPRAGMA table_info(items_title_chars)[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mINSERT INTO items_title_chars ("title_char_id", "item_id") VALUES (2, 3)[0m
+  [4;35;1mTitleChar Update (0.000000)[0m   [0mUPDATE title_chars SET "character" = 'c', "parent_title_char_id" = NULL WHERE id = 1[0m
+  [4;36;1mTitleChar Update (0.000000)[0m   [0;1mUPDATE title_chars SET "character" = 'e', "parent_title_char_id" = 1 WHERE id = 2[0m
+  [4;35;1mItem Update (0.000000)[0m   [0mUPDATE items SET "title" = 'item 1', "parent_item_id" = NULL, "path" = '/' WHERE id = 1[0m
+  [4;36;1mItem Update (0.000000)[0m   [0;1mUPDATE items SET "title" = 'item 2', "parent_item_id" = NULL, "path" = '/' WHERE id = 2[0m
+  [4;35;1mItem Update (0.000000)[0m   [0mUPDATE items SET "title" = 'item 3', "parent_item_id" = NULL, "path" = '/' WHERE id = 3[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mPRAGMA table_info(title_chars)[0m
+  [4;35;1mSQL (0.000000)[0m   [0mPRAGMA table_info(items)[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mINSERT INTO title_chars ("parent_title_char_id", "character") VALUES(NULL, 'c')[0m
+  [4;35;1mSQL (0.000000)[0m   [0mINSERT INTO title_chars ("parent_title_char_id", "character") VALUES(1, 'e')[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mINSERT INTO items ("parent_item_id", "title", "path") VALUES(NULL, 'item 1', '/')[0m
+  [4;35;1mSQL (0.000000)[0m   [0mINSERT INTO items ("parent_item_id", "title", "path") VALUES(NULL, 'item 2', '/')[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mINSERT INTO items ("parent_item_id", "title", "path") VALUES(NULL, 'item 3', '/')[0m
+  [4;35;1mSQL (0.000000)[0m   [0mPRAGMA table_info(items_title_chars)[0m
+  [4;36;1mItem Load (0.000000)[0m   [0;1mSELECT * FROM items INNER JOIN items_title_chars ON items.id = items_title_chars.item_id WHERE (items_title_chars.title_char_id = 1 ) [0m
+  [4;35;1mSQL (0.000000)[0m   [0mPRAGMA table_info(items_title_chars)[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mINSERT INTO items_title_chars ("title_char_id", "item_id") VALUES (1, 1)[0m
+  [4;35;1mSQL (0.000000)[0m   [0mPRAGMA table_info(items_title_chars)[0m
+  [4;36;1mTitleChar Load (0.000000)[0m   [0;1mSELECT * FROM title_chars INNER JOIN items_title_chars ON title_chars.id = items_title_chars.title_char_id WHERE (items_title_chars.item_id = 1 ) [0m
+  [4;35;1mSQL (0.000000)[0m   [0mPRAGMA table_info(items_title_chars)[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mINSERT INTO items_title_chars ("title_char_id", "item_id") VALUES (1, 2)[0m
+  [4;35;1mSQL (0.000000)[0m   [0mPRAGMA table_info(items_title_chars)[0m
+  [4;36;1mTitleChar Load (0.016000)[0m   [0;1mSELECT * FROM title_chars INNER JOIN items_title_chars ON title_chars.id = items_title_chars.title_char_id WHERE (items_title_chars.item_id = 2 ) [0m
+  [4;35;1mSQL (0.000000)[0m   [0mPRAGMA table_info(items_title_chars)[0m
+  [4;36;1mItem Load (0.000000)[0m   [0;1mSELECT * FROM items INNER JOIN items_title_chars ON items.id = items_title_chars.item_id WHERE (items_title_chars.title_char_id = 2 ) [0m
+  [4;35;1mSQL (0.000000)[0m   [0mPRAGMA table_info(items_title_chars)[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mINSERT INTO items_title_chars ("title_char_id", "item_id") VALUES (2, 2)[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mPRAGMA table_info(title_chars)[0m
+  [4;35;1mSQL (0.000000)[0m   [0mPRAGMA table_info(items)[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mINSERT INTO title_chars ("parent_title_char_id", "character") VALUES(NULL, 'c')[0m
+  [4;35;1mSQL (0.000000)[0m   [0mINSERT INTO title_chars ("parent_title_char_id", "character") VALUES(1, 'e')[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mINSERT INTO items ("parent_item_id", "title", "path") VALUES(NULL, 'item 1', '/')[0m
+  [4;35;1mSQL (0.000000)[0m   [0mINSERT INTO items ("parent_item_id", "title", "path") VALUES(NULL, 'item 2', '/')[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mINSERT INTO items ("parent_item_id", "title", "path") VALUES(NULL, 'item 3', '/')[0m
+  [4;35;1mSQL (0.000000)[0m   [0mPRAGMA table_info(items_title_chars)[0m
+  [4;36;1mItem Load (0.000000)[0m   [0;1mSELECT * FROM items INNER JOIN items_title_chars ON items.id = items_title_chars.item_id WHERE (items_title_chars.title_char_id = 1 ) [0m
+  [4;35;1mSQL (0.000000)[0m   [0mPRAGMA table_info(items_title_chars)[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mINSERT INTO items_title_chars ("title_char_id", "item_id") VALUES (1, 1)[0m
+  [4;35;1mSQL (0.000000)[0m   [0mPRAGMA table_info(items_title_chars)[0m
+  [4;36;1mTitleChar Load (0.000000)[0m   [0;1mSELECT * FROM title_chars INNER JOIN items_title_chars ON title_chars.id = items_title_chars.title_char_id WHERE (items_title_chars.item_id = 1 ) [0m
+  [4;35;1mSQL (0.000000)[0m   [0mPRAGMA table_info(items_title_chars)[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mINSERT INTO items_title_chars ("title_char_id", "item_id") VALUES (1, 2)[0m
+  [4;35;1mSQL (0.000000)[0m   [0mPRAGMA table_info(items_title_chars)[0m
+  [4;36;1mTitleChar Load (0.000000)[0m   [0;1mSELECT * FROM title_chars INNER JOIN items_title_chars ON title_chars.id = items_title_chars.title_char_id WHERE (items_title_chars.item_id = 2 ) [0m
+  [4;35;1mSQL (0.000000)[0m   [0mPRAGMA table_info(items_title_chars)[0m
+  [4;36;1mItem Load (0.000000)[0m   [0;1mSELECT * FROM items INNER JOIN items_title_chars ON items.id = items_title_chars.item_id WHERE (items_title_chars.title_char_id = 2 ) [0m
+  [4;35;1mSQL (0.000000)[0m   [0mPRAGMA table_info(items_title_chars)[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mINSERT INTO items_title_chars ("title_char_id", "item_id") VALUES (2, 2)[0m
+  [4;36;1mSQL (0.016000)[0m   [0;1mPRAGMA table_info(title_chars)[0m
+  [4;35;1mSQL (0.000000)[0m   [0mPRAGMA table_info(items)[0m
+  [4;36;1mSQL (0.016000)[0m   [0;1mINSERT INTO title_chars ("parent_title_char_id", "character") VALUES(NULL, 'c')[0m
+  [4;35;1mSQL (0.000000)[0m   [0mINSERT INTO title_chars ("parent_title_char_id", "character") VALUES(1, 'e')[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mINSERT INTO items ("parent_item_id", "title", "path") VALUES(NULL, 'item 1', '/')[0m
+  [4;35;1mSQL (0.000000)[0m   [0mINSERT INTO items ("parent_item_id", "title", "path") VALUES(NULL, 'item 2', '/')[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mINSERT INTO items ("parent_item_id", "title", "path") VALUES(NULL, 'item 3', '/')[0m
+  [4;35;1mSQL (0.000000)[0m   [0mPRAGMA table_info(items_title_chars)[0m
+  [4;36;1mItem Load (0.000000)[0m   [0;1mSELECT * FROM items INNER JOIN items_title_chars ON items.id = items_title_chars.item_id WHERE (items_title_chars.title_char_id = 1 ) [0m
+  [4;35;1mSQL (0.000000)[0m   [0mPRAGMA table_info(items_title_chars)[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mINSERT INTO items_title_chars ("title_char_id", "item_id") VALUES (1, 1)[0m
+  [4;35;1mTitleChar Update (0.000000)[0m   [0mUPDATE title_chars SET "character" = 'c', "parent_title_char_id" = NULL WHERE id = 1[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mPRAGMA table_info(items_title_chars)[0m
+  [4;35;1mTitleChar Load (0.000000)[0m   [0mSELECT * FROM title_chars INNER JOIN items_title_chars ON title_chars.id = items_title_chars.title_char_id WHERE (items_title_chars.item_id = 1 ) [0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mPRAGMA table_info(items_title_chars)[0m
+  [4;35;1mSQL (0.000000)[0m   [0mINSERT INTO items_title_chars ("title_char_id", "item_id") VALUES (1, 2)[0m
+  [4;36;1mTitleChar Update (0.000000)[0m   [0;1mUPDATE title_chars SET "character" = 'c', "parent_title_char_id" = NULL WHERE id = 1[0m
+  [4;35;1mSQL (0.000000)[0m   [0mPRAGMA table_info(items_title_chars)[0m
+  [4;36;1mTitleChar Load (0.000000)[0m   [0;1mSELECT * FROM title_chars INNER JOIN items_title_chars ON title_chars.id = items_title_chars.title_char_id WHERE (items_title_chars.item_id = 2 ) [0m
+  [4;35;1mSQL (0.000000)[0m   [0mPRAGMA table_info(items_title_chars)[0m
+  [4;36;1mItem Load (0.000000)[0m   [0;1mSELECT * FROM items INNER JOIN items_title_chars ON items.id = items_title_chars.item_id WHERE (items_title_chars.title_char_id = 2 ) [0m
+  [4;35;1mSQL (0.000000)[0m   [0mPRAGMA table_info(items_title_chars)[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mINSERT INTO items_title_chars ("title_char_id", "item_id") VALUES (2, 2)[0m
+  [4;35;1mTitleChar Update (0.000000)[0m   [0mUPDATE title_chars SET "character" = 'e', "parent_title_char_id" = 1 WHERE id = 2[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mPRAGMA table_info(title_chars)[0m
+  [4;35;1mSQL (0.000000)[0m   [0mPRAGMA table_info(items)[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mINSERT INTO title_chars ("parent_title_char_id", "character") VALUES(NULL, 'c')[0m
+  [4;35;1mSQL (0.000000)[0m   [0mINSERT INTO title_chars ("parent_title_char_id", "character") VALUES(1, 'e')[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mINSERT INTO items ("parent_item_id", "title", "path") VALUES(NULL, 'item 1', '/')[0m
+  [4;35;1mSQL (0.000000)[0m   [0mINSERT INTO items ("parent_item_id", "title", "path") VALUES(NULL, 'item 2', '/')[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mINSERT INTO items ("parent_item_id", "title", "path") VALUES(NULL, 'item 3', '/')[0m
+  [4;35;1mSQL (0.000000)[0m   [0mPRAGMA table_info(items_title_chars)[0m
+  [4;36;1mItem Load (0.000000)[0m   [0;1mSELECT * FROM items INNER JOIN items_title_chars ON items.id = items_title_chars.item_id WHERE (items_title_chars.title_char_id = 1 ) [0m
+  [4;35;1mSQL (0.000000)[0m   [0mPRAGMA table_info(items_title_chars)[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mINSERT INTO items_title_chars ("title_char_id", "item_id") VALUES (1, 1)[0m
+  [4;35;1mItem Load (0.000000)[0m   [0mSELECT * FROM items WHERE (items.id = 1) LIMIT 1[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mPRAGMA table_info(items_title_chars)[0m
+  [4;35;1mTitleChar Load (0.000000)[0m   [0mSELECT * FROM title_chars INNER JOIN items_title_chars ON title_chars.id = items_title_chars.title_char_id WHERE (items_title_chars.item_id = 1 ) [0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mPRAGMA table_info(items_title_chars)[0m
+  [4;35;1mSQL (0.000000)[0m   [0mINSERT INTO items_title_chars ("title_char_id", "item_id") VALUES (1, 2)[0m
+  [4;36;1mItem Load (0.000000)[0m   [0;1mSELECT * FROM items WHERE (items.id = 2) LIMIT 1[0m
+  [4;35;1mSQL (0.000000)[0m   [0mPRAGMA table_info(items_title_chars)[0m
+  [4;36;1mTitleChar Load (0.000000)[0m   [0;1mSELECT * FROM title_chars INNER JOIN items_title_chars ON title_chars.id = items_title_chars.title_char_id WHERE (items_title_chars.item_id = 2 ) [0m
+  [4;35;1mSQL (0.000000)[0m   [0mPRAGMA table_info(items_title_chars)[0m
+  [4;36;1mItem Load (0.000000)[0m   [0;1mSELECT * FROM items INNER JOIN items_title_chars ON items.id = items_title_chars.item_id WHERE (items_title_chars.title_char_id = 2 ) [0m
+  [4;35;1mSQL (0.000000)[0m   [0mPRAGMA table_info(items_title_chars)[0m
+  [4;36;1mSQL (0.016000)[0m   [0;1mINSERT INTO items_title_chars ("title_char_id", "item_id") VALUES (2, 2)[0m
+  [4;35;1mItem Load (0.000000)[0m   [0mSELECT * FROM items WHERE (items.id = 2) LIMIT 1[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mPRAGMA table_info(items_title_chars)[0m
+  [4;35;1mTitleChar Load (0.000000)[0m   [0mSELECT * FROM title_chars INNER JOIN items_title_chars ON title_chars.id = items_title_chars.title_char_id WHERE (items_title_chars.item_id = 2 ) [0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mPRAGMA table_info(items_title_chars)[0m
+  [4;35;1mSQL (0.000000)[0m   [0mINSERT INTO items_title_chars ("title_char_id", "item_id") VALUES (2, 3)[0m
+  [4;36;1mItem Load (0.000000)[0m   [0;1mSELECT * FROM items WHERE (items.id = 3) LIMIT 1[0m
+  [4;35;1mSQL (0.000000)[0m   [0mPRAGMA table_info(items_title_chars)[0m
+  [4;36;1mTitleChar Load (0.000000)[0m   [0;1mSELECT * FROM title_chars INNER JOIN items_title_chars ON title_chars.id = items_title_chars.title_char_id WHERE (items_title_chars.item_id = 3 ) [0m
+  [4;35;1mTitleChar Update (0.000000)[0m   [0mUPDATE title_chars SET "character" = 'c', "parent_title_char_id" = NULL WHERE id = 1[0m
+  [4;36;1mTitleChar Update (0.000000)[0m   [0;1mUPDATE title_chars SET "character" = 'e', "parent_title_char_id" = 1 WHERE id = 2[0m
+  [4;35;1mItem Update (0.000000)[0m   [0mUPDATE items SET "title" = 'item 1', "parent_item_id" = NULL, "path" = '/' WHERE id = 1[0m
+  [4;36;1mItem Update (0.000000)[0m   [0;1mUPDATE items SET "title" = 'item 2', "parent_item_id" = NULL, "path" = '/' WHERE id = 2[0m
+  [4;35;1mItem Update (0.000000)[0m   [0mUPDATE items SET "title" = 'item 3', "parent_item_id" = NULL, "path" = '/' WHERE id = 3[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mPRAGMA table_info(items_title_chars)[0m
+  [4;35;1mTitleChar Load (0.000000)[0m   [0mSELECT * FROM title_chars INNER JOIN items_title_chars ON title_chars.id = items_title_chars.title_char_id WHERE (items_title_chars.item_id = 1 ) [0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mPRAGMA table_info(items_title_chars)[0m
+  [4;35;1mTitleChar Load (0.000000)[0m   [0mSELECT * FROM title_chars INNER JOIN items_title_chars ON title_chars.id = items_title_chars.title_char_id WHERE (items_title_chars.item_id = 2 ) [0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mPRAGMA table_info(items_title_chars)[0m
+  [4;35;1mTitleChar Load (0.000000)[0m   [0mSELECT * FROM title_chars INNER JOIN items_title_chars ON title_chars.id = items_title_chars.title_char_id WHERE (items_title_chars.item_id = 3 ) [0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mPRAGMA table_info(title_chars)[0m
+  [4;35;1mSQL (0.000000)[0m   [0mPRAGMA table_info(items)[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mINSERT INTO title_chars ("parent_title_char_id", "character") VALUES(NULL, 'c')[0m
+  [4;35;1mSQL (0.000000)[0m   [0mINSERT INTO title_chars ("parent_title_char_id", "character") VALUES(1, 'e')[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mINSERT INTO items ("parent_item_id", "title", "path") VALUES(NULL, 'item 1', '/')[0m
+  [4;35;1mSQL (0.000000)[0m   [0mINSERT INTO items ("parent_item_id", "title", "path") VALUES(NULL, 'item 2', '/')[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mINSERT INTO items ("parent_item_id", "title", "path") VALUES(NULL, 'item 3', '/')[0m
+  [4;35;1mSQL (0.000000)[0m   [0mPRAGMA table_info(items_title_chars)[0m
+  [4;36;1mItem Load (0.000000)[0m   [0;1mSELECT * FROM items INNER JOIN items_title_chars ON items.id = items_title_chars.item_id WHERE (items_title_chars.title_char_id = 1 ) [0m
+  [4;35;1mSQL (0.000000)[0m   [0mPRAGMA table_info(items_title_chars)[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mINSERT INTO items_title_chars ("title_char_id", "item_id") VALUES (1, 1)[0m
+  [4;35;1mItem Load (0.000000)[0m   [0mSELECT * FROM items WHERE (items.id = 1) LIMIT 1[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mPRAGMA table_info(items_title_chars)[0m
+  [4;35;1mTitleChar Load (0.000000)[0m   [0mSELECT * FROM title_chars INNER JOIN items_title_chars ON title_chars.id = items_title_chars.title_char_id WHERE (items_title_chars.item_id = 1 ) [0m
+  [4;36;1mSQL (0.015000)[0m   [0;1mPRAGMA table_info(items_title_chars)[0m
+  [4;35;1mSQL (0.000000)[0m   [0mINSERT INTO items_title_chars ("title_char_id", "item_id") VALUES (1, 2)[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mPRAGMA table_info(items_title_chars)[0m
+  [4;35;1mItem Load (0.000000)[0m   [0mSELECT * FROM items INNER JOIN items_title_chars ON items.id = items_title_chars.item_id WHERE (items_title_chars.title_char_id = 2 ) [0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mPRAGMA table_info(items_title_chars)[0m
+  [4;35;1mSQL (0.000000)[0m   [0mINSERT INTO items_title_chars ("title_char_id", "item_id") VALUES (2, 2)[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mPRAGMA table_info(items_title_chars)[0m
+  [4;35;1mTitleChar Load (0.000000)[0m   [0mSELECT * FROM title_chars INNER JOIN items_title_chars ON title_chars.id = items_title_chars.title_char_id WHERE (items_title_chars.item_id = 2 ) [0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mPRAGMA table_info(items_title_chars)[0m
+  [4;35;1mSQL (0.000000)[0m   [0mINSERT INTO items_title_chars ("title_char_id", "item_id") VALUES (2, 3)[0m
+  [4;36;1mItem Load (0.000000)[0m   [0;1mSELECT * FROM items WHERE (items.id = 3) LIMIT 1[0m
+  [4;35;1mSQL (0.000000)[0m   [0mPRAGMA table_info(items_title_chars)[0m
+  [4;36;1mTitleChar Load (0.000000)[0m   [0;1mSELECT * FROM title_chars INNER JOIN items_title_chars ON title_chars.id = items_title_chars.title_char_id WHERE (items_title_chars.item_id = 3 ) [0m
+  [4;35;1mTitleChar Update (0.000000)[0m   [0mUPDATE title_chars SET "character" = 'c', "parent_title_char_id" = NULL WHERE id = 1[0m
+  [4;36;1mTitleChar Update (0.000000)[0m   [0;1mUPDATE title_chars SET "character" = 'e', "parent_title_char_id" = 1 WHERE id = 2[0m
+  [4;35;1mItem Update (0.000000)[0m   [0mUPDATE items SET "title" = 'item 1', "parent_item_id" = NULL, "path" = '/' WHERE id = 1[0m
+  [4;36;1mItem Update (0.000000)[0m   [0;1mUPDATE items SET "title" = 'item 2', "parent_item_id" = NULL, "path" = '/' WHERE id = 2[0m
+  [4;35;1mItem Update (0.000000)[0m   [0mUPDATE items SET "title" = 'item 3', "parent_item_id" = NULL, "path" = '/' WHERE id = 3[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mPRAGMA table_info(items_title_chars)[0m
+  [4;35;1mTitleChar Load (0.000000)[0m   [0mSELECT * FROM title_chars INNER JOIN items_title_chars ON title_chars.id = items_title_chars.title_char_id WHERE (items_title_chars.item_id = 1 ) [0m
+  [4;36;1mSQL (0.016000)[0m   [0;1mPRAGMA table_info(items_title_chars)[0m
+  [4;35;1mTitleChar Load (0.000000)[0m   [0mSELECT * FROM title_chars INNER JOIN items_title_chars ON title_chars.id = items_title_chars.title_char_id WHERE (items_title_chars.item_id = 3 ) [0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mPRAGMA table_info(title_chars)[0m
+  [4;35;1mSQL (0.000000)[0m   [0mPRAGMA table_info(items)[0m
+  [4;36;1mSQL (0.016000)[0m   [0;1mINSERT INTO title_chars ("parent_title_char_id", "character") VALUES(NULL, 'c')[0m
+  [4;35;1mSQL (0.000000)[0m   [0mINSERT INTO title_chars ("parent_title_char_id", "character") VALUES(1, 'e')[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mINSERT INTO items ("parent_item_id", "title", "path") VALUES(NULL, 'item 1', '/')[0m
+  [4;35;1mSQL (0.000000)[0m   [0mINSERT INTO items ("parent_item_id", "title", "path") VALUES(NULL, 'item 2', '/')[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mINSERT INTO items ("parent_item_id", "title", "path") VALUES(NULL, 'item 3', '/')[0m
+  [4;35;1mSQL (0.000000)[0m   [0mPRAGMA table_info(items_title_chars)[0m
+  [4;36;1mItem Load (0.000000)[0m   [0;1mSELECT * FROM items INNER JOIN items_title_chars ON items.id = items_title_chars.item_id WHERE (items_title_chars.title_char_id = 1 ) [0m
+  [4;35;1mSQL (0.016000)[0m   [0mPRAGMA table_info(items_title_chars)[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mINSERT INTO items_title_chars ("title_char_id", "item_id") VALUES (1, 1)[0m
+  [4;35;1mItem Load (0.000000)[0m   [0mSELECT * FROM items WHERE (items.id = 1) LIMIT 1[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mPRAGMA table_info(items_title_chars)[0m
+  [4;35;1mTitleChar Load (0.000000)[0m   [0mSELECT * FROM title_chars INNER JOIN items_title_chars ON title_chars.id = items_title_chars.title_char_id WHERE (items_title_chars.item_id = 1 ) [0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mPRAGMA table_info(items_title_chars)[0m
+  [4;35;1mSQL (0.000000)[0m   [0mINSERT INTO items_title_chars ("title_char_id", "item_id") VALUES (1, 2)[0m
+  [4;36;1mItem Load (0.000000)[0m   [0;1mSELECT * FROM items WHERE (items.id = 2) LIMIT 1[0m
+  [4;35;1mSQL (0.000000)[0m   [0mPRAGMA table_info(items_title_chars)[0m
+  [4;36;1mTitleChar Load (0.000000)[0m   [0;1mSELECT * FROM title_chars INNER JOIN items_title_chars ON title_chars.id = items_title_chars.title_char_id WHERE (items_title_chars.item_id = 2 ) [0m
+  [4;35;1mSQL (0.000000)[0m   [0mPRAGMA table_info(items_title_chars)[0m
+  [4;36;1mItem Load (0.000000)[0m   [0;1mSELECT * FROM items INNER JOIN items_title_chars ON items.id = items_title_chars.item_id WHERE (items_title_chars.title_char_id = 2 ) [0m
+  [4;35;1mSQL (0.000000)[0m   [0mPRAGMA table_info(items_title_chars)[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mINSERT INTO items_title_chars ("title_char_id", "item_id") VALUES (2, 2)[0m
+  [4;35;1mSQL (0.000000)[0m   [0mPRAGMA table_info(items_title_chars)[0m
+  [4;36;1mTitleChar Load (0.000000)[0m   [0;1mSELECT * FROM title_chars INNER JOIN items_title_chars ON title_chars.id = items_title_chars.title_char_id WHERE (items_title_chars.item_id = 2 ) [0m
+  [4;35;1mSQL (0.000000)[0m   [0mPRAGMA table_info(items_title_chars)[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mINSERT INTO items_title_chars ("title_char_id", "item_id") VALUES (2, 3)[0m
+  [4;35;1mItem Load (0.000000)[0m   [0mSELECT * FROM items WHERE (items.id = 3) LIMIT 1[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mPRAGMA table_info(items_title_chars)[0m
+  [4;35;1mTitleChar Load (0.000000)[0m   [0mSELECT * FROM title_chars INNER JOIN items_title_chars ON title_chars.id = items_title_chars.title_char_id WHERE (items_title_chars.item_id = 3 ) [0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mPRAGMA table_info(items_title_chars)[0m
+  [4;35;1mTitleChar Load (0.000000)[0m   [0mSELECT * FROM title_chars INNER JOIN items_title_chars ON title_chars.id = items_title_chars.title_char_id WHERE (items_title_chars.item_id = 1 ) [0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mPRAGMA table_info(items_title_chars)[0m
+  [4;35;1mTitleChar Load (0.000000)[0m   [0mSELECT * FROM title_chars INNER JOIN items_title_chars ON title_chars.id = items_title_chars.title_char_id WHERE (items_title_chars.item_id = 3 ) [0m

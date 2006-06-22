@@ -1,0 +1,29 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+#first:
+#  id: 1
+#another:
+#  id: 2
+
+childless:
+  id: 1
+  title:  "I have no children"
+  path: "/"
+  
+parent:
+  id: 2
+  title: "I have two children"
+  path: "/"
+  
+child1:
+  id: 3
+  title: "I'm child one"
+  path: "/child1"
+  parent_item_id: 2
+  
+child2:
+  id: 4
+  title: "I'm child two"
+  path: "/child2"
+  parent_item_id: 2
+
+

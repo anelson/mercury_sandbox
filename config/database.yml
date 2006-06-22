@@ -1,0 +1,11 @@
+production:
+  adapter: sqlite3       # Use sqlite3 for 3.x
+  dbfile: db/rails-production.db
+
+test:
+  adapter: sqlite3       # Use sqlite3 for 3.x
+  dbfile: db/rails-test.db
+
+development:
+  adapter: sqlite3       # Use sqlite3 for 3.x
+  dbfile: db/rails-development.db

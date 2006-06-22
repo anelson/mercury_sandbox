@@ -1,0 +1,50 @@
+[history]
+0=INSERT INTO items_title_chars ("title_char_id", "item_id") VALUES (1, 1)
+1=create temp table search1 (title_char_id integer primary key not null)
+2=select * from search0
+3=insert into search0 (title_char_id)\r\n            select distinct tc.id\r\n            from\r\n                title_char_ancestors tca\r\n                inner join\r\n                title_chars tc\r\n                on\r\n                    tc.id = tca.title_char_node_id\r\n            where\r\n                tca.ancestor_title_char_node_id is null\r\n                and\r\n                tc.character = 't'\r\n
+4=create temp table search0 (title_char_id integer primary key not null)
+5=begin deferred transaction
+6=pragma temp_store = memory
+7=drop index idx_title_chars
+8=select count(id) from items
+9=select sum(length(title)) from items
+10=select count(id) from title_chars
+11=select tc.id from\r\n                title_chars tc,\r\n                title_char_ancestors tca\r\n            where\r\n                tc.id = tca.title_char_node_id\r\n                and\r\n                tca.ancestor_title_char_node_id is null\r\n                and\r\n                tc.character = 'd'
+12=select tc.id from\r\n                title_chars tc,\r\n                title_char_ancestors tca\r\n            where\r\n                tc.id = tca.title_char_node_id\r\n                and\r\n                tca.ancestor_title_char_node_id is null\r\n                and\r\n                tc.character = :char
+13=select * from title_chars where character = 'p' and parent_title_char_id is null
+14=select * from title_chars where character = 'p' and parent_title_char_id = ''
+15=select * from title_chars where character = 'p' and parent_title_char_id = null
+16=select * from title_chars where character = 'p'
+[prefs]
+x=1618
+y=166
+h=956
+w=1280
+s=300
+max=100
+db=G:\\Projects\\scrap\\MercurySandbox\\db\\rails-test.db
+encoding=utf8
+dbdir=G:\\Projects\\scrap\\MercurySandbox\\db
+sqldir=G:\\Projects\\scrap\\MercurySandbox
+c1r=110
+c1g=110
+c1b=220
+c2r=0
+c2g=0
+c2b=0
+c3r=0
+c3g=0
+c3b=255
+c4r=128
+c4g=0
+c4b=255
+c5r=255
+c5g=0
+c5b=0
+c6r=0
+c6g=0
+c6b=0
+c7r=0
+c7g=0
+c7b=0

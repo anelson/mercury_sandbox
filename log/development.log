@@ -1,0 +1,984 @@
+  [4;36;1mSQL (0.000000)[0m   [0;1mCREATE TABLE schema_info (version integer)[0m
+  [4;35;1mSQL (0.000000)[0m   [0mINSERT INTO schema_info (version) VALUES(0)[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mSQLite3::SQLException: table schema_info already exists: CREATE TABLE schema_info (version integer)[0m
+  [4;35;1mSQL (0.015000)[0m   [0mSELECT * FROM schema_info[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mSELECT name FROM sqlite_master WHERE type = 'table'[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mSQLite3::SQLException: table schema_info already exists: CREATE TABLE schema_info (version integer)[0m
+  [4;35;1mSQL (0.000000)[0m   [0mSQLite3::SQLException: table schema_info already exists: CREATE TABLE schema_info (version integer)[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mSELECT version FROM schema_info[0m
+Migrating to CreateItems (1)
+  [4;35;1mSQL (0.000000)[0m   [0mCREATE TABLE items ("id" INTEGER PRIMARY KEY NOT NULL, "path" varchar(255) NOT NULL, "title" varchar(255) NOT NULL, "parent_item_id" integer) [0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mUPDATE schema_info SET version = 1[0m
+  [4;35;1mSQL (0.000000)[0m   [0mSELECT * FROM schema_info[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mSELECT name FROM sqlite_master WHERE type = 'table'[0m
+  [4;35;1mSQL (0.000000)[0m   [0mPRAGMA table_info(items)[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mPRAGMA index_list(items)[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mSQLite3::SQLException: table schema_info already exists: CREATE TABLE schema_info (version integer)[0m
+  [4;35;1mSQL (0.000000)[0m   [0mSELECT version FROM schema_info[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mSELECT version FROM schema_info[0m
+  [4;35;1mSQL (0.000000)[0m   [0mSQLite3::SQLException: table schema_info already exists: CREATE TABLE schema_info (version integer)[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mSELECT version FROM schema_info[0m
+Migrating to CreateItems (1)
+  [4;35;1mSQL (0.000000)[0m   [0mDROP TABLE items[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mUPDATE schema_info SET version = 0[0m
+  [4;35;1mSQL (0.000000)[0m   [0mSELECT * FROM schema_info[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mSELECT name FROM sqlite_master WHERE type = 'table'[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mSQLite3::SQLException: table schema_info already exists: CREATE TABLE schema_info (version integer)[0m
+  [4;35;1mSQL (0.000000)[0m   [0mSQLite3::SQLException: table schema_info already exists: CREATE TABLE schema_info (version integer)[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mSELECT version FROM schema_info[0m
+Migrating to CreateItems (1)
+  [4;35;1mSQL (0.000000)[0m   [0mCREATE TABLE items ("id" INTEGER PRIMARY KEY NOT NULL, "path" varchar(255) NOT NULL, "title" varchar(255) NOT NULL, "parent_item_id" integer) [0m
+  [4;36;1mSQL (0.015000)[0m   [0;1mUPDATE schema_info SET version = 1[0m
+  [4;35;1mSQL (0.000000)[0m   [0mSELECT * FROM schema_info[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mSELECT name FROM sqlite_master WHERE type = 'table'[0m
+  [4;35;1mSQL (0.000000)[0m   [0mPRAGMA table_info(items)[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mPRAGMA index_list(items)[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mSELECT * FROM schema_info[0m
+  [4;35;1mSQL (0.000000)[0m   [0mSELECT name FROM sqlite_master WHERE type = 'table'[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mPRAGMA table_info(items)[0m
+  [4;35;1mSQL (0.000000)[0m   [0mPRAGMA index_list(items)[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mSQLite3::SQLException: no such table: items: DROP TABLE items[0m
+  [4;35;1mSQL (0.000000)[0m   [0mCREATE TABLE items ("id" INTEGER PRIMARY KEY NOT NULL, "path" varchar(255) NOT NULL, "title" varchar(255) NOT NULL, "parent_item_id" integer) [0m
+  [4;36;1mSQL (0.015000)[0m   [0;1mCREATE TABLE schema_info (version integer)[0m
+  [4;35;1mSQL (0.000000)[0m   [0mINSERT INTO schema_info (version) VALUES(0)[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mPRAGMA table_info(schema_info)[0m
+  [4;35;1mSQL (0.000000)[0m   [0mUPDATE schema_info SET version = 1[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mSQLite3::SQLException: table schema_info already exists: CREATE TABLE schema_info (version integer)[0m
+  [4;35;1mSQL (0.000000)[0m   [0mSQLite3::SQLException: table schema_info already exists: CREATE TABLE schema_info (version integer)[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mSQLite3::SQLException: table schema_info already exists: CREATE TABLE schema_info (version integer)[0m
+  [4;35;1mSQL (0.000000)[0m   [0mSQLite3::SQLException: table schema_info already exists: CREATE TABLE schema_info (version integer)[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mSELECT version FROM schema_info[0m
+  [4;35;1mSQL (0.000000)[0m   [0mSELECT version FROM schema_info[0m
+Migrating to CreateTitleChars (2)
+  [4;36;1mSQL (0.000000)[0m   [0;1mSQLite3::SQLException: near "unique": syntax error: CREATE TABLE title_chars ("id" INTEGER PRIMARY KEY NOT NULL, "character" varchar(255) NOT NULL, "parent_title_char_id" integer) unique (parent_title_char_id, character)[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mSQLite3::SQLException: table schema_info already exists: CREATE TABLE schema_info (version integer)[0m
+  [4;35;1mSQL (0.000000)[0m   [0mSQLite3::SQLException: table schema_info already exists: CREATE TABLE schema_info (version integer)[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mSELECT version FROM schema_info[0m
+  [4;35;1mSQL (0.000000)[0m   [0mSELECT version FROM schema_info[0m
+Migrating to CreateTitleChars (2)
+  [4;36;1mSQL (0.000000)[0m   [0;1mCREATE TABLE title_chars ("id" INTEGER PRIMARY KEY NOT NULL, "character" varchar(255) NOT NULL, "parent_title_char_id" integer) [0m
+  [4;35;1mSQL (0.015000)[0m   [0mUPDATE schema_info SET version = 2[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mSELECT * FROM schema_info[0m
+  [4;35;1mSQL (0.000000)[0m   [0mSELECT name FROM sqlite_master WHERE type = 'table'[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mPRAGMA table_info(items)[0m
+  [4;35;1mSQL (0.000000)[0m   [0mPRAGMA index_list(items)[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mPRAGMA table_info(title_chars)[0m
+  [4;35;1mSQL (0.000000)[0m   [0mPRAGMA index_list(title_chars)[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mSQLite3::SQLException: table schema_info already exists: CREATE TABLE schema_info (version integer)[0m
+  [4;35;1mSQL (0.000000)[0m   [0mSELECT version FROM schema_info[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mSELECT version FROM schema_info[0m
+  [4;35;1mSQL (0.000000)[0m   [0mSQLite3::SQLException: table schema_info already exists: CREATE TABLE schema_info (version integer)[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mSELECT version FROM schema_info[0m
+Migrating to CreateTitleChars (2)
+  [4;35;1mSQL (0.000000)[0m   [0mDROP TABLE title_chars[0m
+  [4;36;1mSQL (0.016000)[0m   [0;1mUPDATE schema_info SET version = 1[0m
+  [4;35;1mSQL (0.000000)[0m   [0mSELECT version FROM schema_info[0m
+Migrating to CreateItems (1)
+  [4;36;1mSQL (0.000000)[0m   [0;1mDROP TABLE items[0m
+  [4;35;1mSQL (0.016000)[0m   [0mUPDATE schema_info SET version = 0[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mSELECT * FROM schema_info[0m
+  [4;35;1mSQL (0.000000)[0m   [0mSELECT name FROM sqlite_master WHERE type = 'table'[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mSQLite3::SQLException: table schema_info already exists: CREATE TABLE schema_info (version integer)[0m
+  [4;35;1mSQL (0.000000)[0m   [0mSQLite3::SQLException: table schema_info already exists: CREATE TABLE schema_info (version integer)[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mSELECT version FROM schema_info[0m
+Migrating to CreateItems (1)
+  [4;35;1mSQL (0.047000)[0m   [0mCREATE TABLE items ("id" INTEGER PRIMARY KEY NOT NULL, "path" varchar(255) NOT NULL, "title" varchar(255) NOT NULL, "parent_item_id" integer) [0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mUPDATE schema_info SET version = 1[0m
+  [4;35;1mSQL (0.000000)[0m   [0mSELECT version FROM schema_info[0m
+Migrating to CreateTitleChars (2)
+  [4;36;1mSQL (0.000000)[0m   [0;1mSQLite3::SQLException: table schema_info already exists: CREATE TABLE schema_info (version integer)[0m
+  [4;35;1mSQL (0.000000)[0m   [0mSQLite3::SQLException: table schema_info already exists: CREATE TABLE schema_info (version integer)[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mSELECT version FROM schema_info[0m
+  [4;35;1mSQL (0.000000)[0m   [0mSELECT version FROM schema_info[0m
+Migrating to CreateTitleChars (2)
+  [4;36;1mSQL (0.016000)[0m   [0;1m
+ create table title_chars (
+ 	id integer primary key autoincrement not null,
+ 	character string not null,
+ 	parent_title_char_id integer null,
+ 
+ 	/* for performance reasons, the parent ID is first */
+ 	unique (parent_title_char_id, character)
+ )
+ [0m
+  [4;35;1mSQL (0.000000)[0m   [0mUPDATE schema_info SET version = 2[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mSELECT * FROM schema_info[0m
+  [4;35;1mSQL (0.000000)[0m   [0mSELECT name FROM sqlite_master WHERE type = 'table'[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mPRAGMA table_info(items)[0m
+  [4;35;1mSQL (0.000000)[0m   [0mPRAGMA index_list(items)[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mPRAGMA table_info(sqlite_sequence)[0m
+  [4;35;1mSQL (0.000000)[0m   [0mPRAGMA table_info(title_chars)[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mPRAGMA index_list(title_chars)[0m
+  [4;35;1mSQL (0.000000)[0m   [0mPRAGMA index_info('sqlite_autoindex_title_chars_1')[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mSQLite3::SQLException: table schema_info already exists: CREATE TABLE schema_info (version integer)[0m
+  [4;35;1mSQL (0.000000)[0m   [0mSELECT version FROM schema_info[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mSELECT version FROM schema_info[0m
+  [4;35;1mSQL (0.000000)[0m   [0mSQLite3::SQLException: table schema_info already exists: CREATE TABLE schema_info (version integer)[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mSELECT version FROM schema_info[0m
+Migrating to CreateTitleChars (2)
+  [4;35;1mSQL (0.016000)[0m   [0mDROP TABLE title_chars[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mUPDATE schema_info SET version = 1[0m
+Reached target version: 1
+  [4;35;1mSQL (0.016000)[0m   [0mSELECT * FROM schema_info[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mSELECT name FROM sqlite_master WHERE type = 'table'[0m
+  [4;35;1mSQL (0.000000)[0m   [0mPRAGMA table_info(items)[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mPRAGMA index_list(items)[0m
+  [4;35;1mSQL (0.000000)[0m   [0mPRAGMA table_info(sqlite_sequence)[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mSQLite3::SQLException: table schema_info already exists: CREATE TABLE schema_info (version integer)[0m
+  [4;35;1mSQL (0.000000)[0m   [0mSELECT version FROM schema_info[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mSQLite3::SQLException: table schema_info already exists: CREATE TABLE schema_info (version integer)[0m
+  [4;35;1mSQL (0.000000)[0m   [0mSELECT version FROM schema_info[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mSELECT version FROM schema_info[0m
+Migrating to CreateTitleChars (2)
+  [4;35;1mSQL (0.015000)[0m   [0m
+ create table title_chars (
+ 	id integer primary key autoincrement not null,
+ 	character string not null,
+ 	parent_title_char_id integer null,
+ 
+ 	/* for performance reasons, the parent ID is first */
+ 	unique (parent_title_char_id, character)
+ )
+ [0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mUPDATE schema_info SET version = 2[0m
+  [4;35;1mSQL (0.000000)[0m   [0mSELECT * FROM schema_info[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mSELECT name FROM sqlite_master WHERE type = 'table'[0m
+  [4;35;1mSQL (0.000000)[0m   [0mPRAGMA table_info(items)[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mPRAGMA index_list(items)[0m
+  [4;35;1mSQL (0.000000)[0m   [0mPRAGMA table_info(sqlite_sequence)[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mPRAGMA table_info(title_chars)[0m
+  [4;35;1mSQL (0.000000)[0m   [0mPRAGMA index_list(title_chars)[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mPRAGMA index_info('sqlite_autoindex_title_chars_1')[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mSELECT * FROM schema_info[0m
+  [4;35;1mSQL (0.000000)[0m   [0mSELECT name FROM sqlite_master WHERE type = 'table'[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mPRAGMA table_info(items)[0m
+  [4;35;1mSQL (0.000000)[0m   [0mPRAGMA index_list(items)[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mPRAGMA table_info(sqlite_sequence)[0m
+  [4;35;1mSQL (0.000000)[0m   [0mPRAGMA table_info(title_chars)[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mPRAGMA index_list(title_chars)[0m
+  [4;35;1mSQL (0.000000)[0m   [0mPRAGMA index_info('sqlite_autoindex_title_chars_1')[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mDROP TABLE items[0m
+  [4;35;1mSQL (0.015000)[0m   [0mCREATE TABLE items ("id" INTEGER PRIMARY KEY NOT NULL, "path" varchar(255) NOT NULL, "title" varchar(255) NOT NULL, "parent_item_id" integer) [0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mSQLite3::SQLException: no such table: title_chars: DROP TABLE title_chars[0m
+  [4;35;1mSQL (0.000000)[0m   [0mCREATE TABLE title_chars ("id" INTEGER PRIMARY KEY NOT NULL, "character" varchar(255) NOT NULL, "parent_title_char_id" integer) [0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mSQLite3::SQLException: object name reserved for internal use: sqlite_autoindex_title_chars_1: CREATE UNIQUE INDEX sqlite_autoindex_title_chars_1 ON title_chars (parent_title_char_id, character)[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mSQLite3::SQLException: table schema_info already exists: CREATE TABLE schema_info (version integer)[0m
+  [4;35;1mSQL (0.000000)[0m   [0mSELECT version FROM schema_info[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mSELECT version FROM schema_info[0m
+  [4;35;1mSQL (0.000000)[0m   [0mSQLite3::SQLException: table schema_info already exists: CREATE TABLE schema_info (version integer)[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mSELECT version FROM schema_info[0m
+Migrating to CreateTitleChars (2)
+  [4;35;1mSQL (0.016000)[0m   [0mDROP TABLE title_chars[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mUPDATE schema_info SET version = 1[0m
+Reached target version: 1
+  [4;35;1mSQL (0.000000)[0m   [0mSELECT * FROM schema_info[0m
+  [4;36;1mSQL (0.015000)[0m   [0;1mSELECT name FROM sqlite_master WHERE type = 'table'[0m
+  [4;35;1mSQL (0.000000)[0m   [0mPRAGMA table_info(items)[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mPRAGMA index_list(items)[0m
+  [4;35;1mSQL (0.000000)[0m   [0mPRAGMA table_info(sqlite_sequence)[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mSQLite3::SQLException: table schema_info already exists: CREATE TABLE schema_info (version integer)[0m
+  [4;35;1mSQL (0.000000)[0m   [0mSELECT version FROM schema_info[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mSQLite3::SQLException: table schema_info already exists: CREATE TABLE schema_info (version integer)[0m
+  [4;35;1mSQL (0.016000)[0m   [0mSELECT version FROM schema_info[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mSELECT version FROM schema_info[0m
+Migrating to CreateTitleChars (2)
+  [4;35;1mSQL (0.000000)[0m   [0mCREATE TABLE title_chars ("id" INTEGER PRIMARY KEY NOT NULL, "character" varchar(255) NOT NULL, "parent_title_char_id" integer) [0m
+  [4;36;1mSQL (0.016000)[0m   [0;1mCREATE UNIQUE INDEX title_chars_parent_title_char_id_index ON title_chars (parent_title_char_id, character)[0m
+  [4;35;1mSQL (0.000000)[0m   [0mUPDATE schema_info SET version = 2[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mSELECT * FROM schema_info[0m
+  [4;35;1mSQL (0.000000)[0m   [0mSELECT name FROM sqlite_master WHERE type = 'table'[0m
+  [4;36;1mSQL (0.015000)[0m   [0;1mPRAGMA table_info(items)[0m
+  [4;35;1mSQL (0.000000)[0m   [0mPRAGMA index_list(items)[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mPRAGMA table_info(sqlite_sequence)[0m
+  [4;35;1mSQL (0.000000)[0m   [0mPRAGMA table_info(title_chars)[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mPRAGMA index_list(title_chars)[0m
+  [4;35;1mSQL (0.000000)[0m   [0mPRAGMA index_info('title_chars_parent_title_char_id_index')[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mSELECT * FROM schema_info[0m
+  [4;35;1mSQL (0.000000)[0m   [0mSELECT name FROM sqlite_master WHERE type = 'table'[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mPRAGMA table_info(items)[0m
+  [4;35;1mSQL (0.000000)[0m   [0mPRAGMA index_list(items)[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mPRAGMA table_info(sqlite_sequence)[0m
+  [4;35;1mSQL (0.000000)[0m   [0mPRAGMA table_info(title_chars)[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mPRAGMA index_list(title_chars)[0m
+  [4;35;1mSQL (0.015000)[0m   [0mPRAGMA index_info('title_chars_parent_title_char_id_index')[0m
+  [4;36;1mSQL (0.016000)[0m   [0;1mDROP TABLE items[0m
+  [4;35;1mSQL (0.000000)[0m   [0mCREATE TABLE items ("id" INTEGER PRIMARY KEY NOT NULL, "path" varchar(255) NOT NULL, "title" varchar(255) NOT NULL, "parent_item_id" integer) [0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mDROP TABLE title_chars[0m
+  [4;35;1mSQL (0.016000)[0m   [0mCREATE TABLE title_chars ("id" INTEGER PRIMARY KEY NOT NULL, "character" varchar(255) NOT NULL, "parent_title_char_id" integer) [0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mCREATE UNIQUE INDEX title_chars_parent_title_char_id_index ON title_chars (parent_title_char_id, character)[0m
+  [4;35;1mSQL (0.000000)[0m   [0mSQLite3::SQLException: table schema_info already exists: CREATE TABLE schema_info (version integer)[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mPRAGMA table_info(schema_info)[0m
+  [4;35;1mSQL (0.000000)[0m   [0mUPDATE schema_info SET version = 2[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mSQLite3::SQLException: table schema_info already exists: CREATE TABLE schema_info (version integer)[0m
+  [4;35;1mSQL (0.000000)[0m   [0mSQLite3::SQLException: table schema_info already exists: CREATE TABLE schema_info (version integer)[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mSELECT version FROM schema_info[0m
+  [4;35;1mSQL (0.000000)[0m   [0mSELECT version FROM schema_info[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mSELECT version FROM schema_info[0m
+Migrating to CreateTitleCharAncestors (3)
+  [4;36;1mSQL (0.000000)[0m   [0;1mSQLite3::SQLException: table schema_info already exists: CREATE TABLE schema_info (version integer)[0m
+  [4;35;1mSQL (0.000000)[0m   [0mSQLite3::SQLException: table schema_info already exists: CREATE TABLE schema_info (version integer)[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mSELECT version FROM schema_info[0m
+  [4;35;1mSQL (0.000000)[0m   [0mSELECT version FROM schema_info[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mSELECT version FROM schema_info[0m
+Migrating to CreateTitleCharAncestors (3)
+  [4;36;1mSQL (0.000000)[0m   [0;1mSQLite3::SQLException: table schema_info already exists: CREATE TABLE schema_info (version integer)[0m
+  [4;35;1mSQL (0.000000)[0m   [0mSQLite3::SQLException: table schema_info already exists: CREATE TABLE schema_info (version integer)[0m
+  [4;36;1mSQL (0.016000)[0m   [0;1mSELECT version FROM schema_info[0m
+  [4;35;1mSQL (0.000000)[0m   [0mSELECT version FROM schema_info[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mSELECT version FROM schema_info[0m
+Migrating to CreateTitleCharAncestors (3)
+  [4;36;1mSQL (0.000000)[0m   [0;1mSQLite3::SQLException: table schema_info already exists: CREATE TABLE schema_info (version integer)[0m
+  [4;35;1mSQL (0.000000)[0m   [0mSQLite3::SQLException: table schema_info already exists: CREATE TABLE schema_info (version integer)[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mSELECT version FROM schema_info[0m
+  [4;35;1mSQL (0.000000)[0m   [0mSELECT version FROM schema_info[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mSELECT version FROM schema_info[0m
+Migrating to CreateTitleCharAncestors (3)
+  [4;35;1mSQL (0.000000)[0m   [0m
+ create table title_char_ancestors (
+ title_char_id integer not null,
+ 
+ /* for performance reasons, the character of title_char_id is also stored here */
+ title_char_character string not null,
+ 
+ ancestor_title_char_id integer null,
+ 
+ /* for performance reasons, the ancestor id is first and the character of the
+ title char is included in the pkey */
+ primary key (ancestor_title_char_id, title_char_character, title_char_id)
+ )
+ [0m
+  [4;36;1mSQL (0.000000)[0m   [0;1m
+ /* an index to support the insert trigger above that automatically populates the ancestors table */
+ create index idx_title_char_ancestors_tci on title_char_ancestors(title_char_id)
+ [0m
+  [4;35;1mSQL (0.000000)[0m   [0m
+ /* trigger to populate the title_char_ancestors table on changes to title_chars */
+ create trigger trg_title_chars_ai after insert on title_chars
+ begin
+ /* Insert a record for the character's immediate parent */
+ insert into title_char_ancestors(
+ title_char_id, 
+ title_char_character,
+ ancestor_title_char_id)
+ values (
+ NEW.id,
+ NEW.character,
+ NEW.parent_title_char_id);
+ 
+ /* and copy the immediate parent's ancestors over as well */
+ insert into title_char_ancestors(
+ title_char_id, 
+ title_char_character,
+ ancestor_title_char_id)
+ select
+ NEW.id,
+ NEW.character,
+ tca.ancestor_title_char_id
+ from
+ title_char_ancestors tca
+ where
+ tca.title_char_id = NEW.parent_title_char_id;
+ end;
+ 
+ /*
+ create trigger trg_title_chars_au after update on title_chars
+ begin
+ RAISE(ABORT, 'Title char ancestors maintenance triggers do not support updates yet');
+ end;
+ */
+ 
+ create trigger trg_title_chars_ad after delete on title_chars
+ begin
+ delete from title_char_ancestors where ancestor_title_char_id = OLD.title_char_id;
+ end;
+ [0m
+  [4;36;1mSQL (0.016000)[0m   [0;1mUPDATE schema_info SET version = 3[0m
+  [4;35;1mSQL (0.000000)[0m   [0mSELECT * FROM schema_info[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mSELECT name FROM sqlite_master WHERE type = 'table'[0m
+  [4;35;1mSQL (0.000000)[0m   [0mPRAGMA table_info(items)[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mPRAGMA index_list(items)[0m
+  [4;35;1mSQL (0.000000)[0m   [0mPRAGMA table_info(sqlite_sequence)[0m
+  [4;36;1mSQL (0.016000)[0m   [0;1mPRAGMA table_info(title_char_ancestors)[0m
+  [4;35;1mSQL (0.000000)[0m   [0mPRAGMA index_list(title_char_ancestors)[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mPRAGMA index_info('idx_title_char_ancestors_tci')[0m
+  [4;35;1mSQL (0.000000)[0m   [0mPRAGMA index_info('sqlite_autoindex_title_char_ancestors_1')[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mPRAGMA table_info(title_chars)[0m
+  [4;35;1mSQL (0.000000)[0m   [0mPRAGMA index_list(title_chars)[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mPRAGMA index_info('title_chars_parent_title_char_id_index')[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mSQLite3::SQLException: table schema_info already exists: CREATE TABLE schema_info (version integer)[0m
+  [4;35;1mSQL (0.000000)[0m   [0mSQLite3::SQLException: table schema_info already exists: CREATE TABLE schema_info (version integer)[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mSELECT version FROM schema_info[0m
+  [4;35;1mSQL (0.000000)[0m   [0mSELECT version FROM schema_info[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mSELECT version FROM schema_info[0m
+  [4;35;1mSQL (0.000000)[0m   [0mSELECT version FROM schema_info[0m
+Migrating to CreateItemTitleChars (4)
+  [4;36;1mSQL (0.015000)[0m   [0;1mCREATE TABLE item_title_chars ("id" INTEGER PRIMARY KEY NOT NULL, "item_id" integer NOT NULL, "title_char_id" integer NOT NULL) [0m
+  [4;35;1mSQL (0.016000)[0m   [0mCREATE UNIQUE INDEX item_title_chars_title_char_id_index ON item_title_chars (title_char_id, item_id)[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mUPDATE schema_info SET version = 4[0m
+  [4;35;1mSQL (0.000000)[0m   [0mSELECT * FROM schema_info[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mSELECT name FROM sqlite_master WHERE type = 'table'[0m
+  [4;35;1mSQL (0.000000)[0m   [0mPRAGMA table_info(item_title_chars)[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mPRAGMA index_list(item_title_chars)[0m
+  [4;35;1mSQL (0.000000)[0m   [0mPRAGMA index_info('item_title_chars_title_char_id_index')[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mPRAGMA table_info(items)[0m
+  [4;35;1mSQL (0.000000)[0m   [0mPRAGMA index_list(items)[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mPRAGMA table_info(sqlite_sequence)[0m
+  [4;35;1mSQL (0.000000)[0m   [0mPRAGMA table_info(title_char_ancestors)[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mPRAGMA index_list(title_char_ancestors)[0m
+  [4;35;1mSQL (0.000000)[0m   [0mPRAGMA index_info('idx_title_char_ancestors_tci')[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mPRAGMA index_info('sqlite_autoindex_title_char_ancestors_1')[0m
+  [4;35;1mSQL (0.015000)[0m   [0mPRAGMA table_info(title_chars)[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mPRAGMA index_list(title_chars)[0m
+  [4;35;1mSQL (0.000000)[0m   [0mPRAGMA index_info('title_chars_parent_title_char_id_index')[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mSELECT * FROM schema_info[0m
+  [4;35;1mSQL (0.000000)[0m   [0mSELECT name FROM sqlite_master WHERE type = 'table'[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mPRAGMA table_info(item_title_chars)[0m
+  [4;35;1mSQL (0.000000)[0m   [0mPRAGMA index_list(item_title_chars)[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mPRAGMA index_info('item_title_chars_title_char_id_index')[0m
+  [4;35;1mSQL (0.000000)[0m   [0mPRAGMA table_info(items)[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mPRAGMA index_list(items)[0m
+  [4;35;1mSQL (0.000000)[0m   [0mPRAGMA table_info(sqlite_sequence)[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mPRAGMA table_info(title_char_ancestors)[0m
+  [4;35;1mSQL (0.000000)[0m   [0mPRAGMA index_list(title_char_ancestors)[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mPRAGMA index_info('idx_title_char_ancestors_tci')[0m
+  [4;35;1mSQL (0.000000)[0m   [0mPRAGMA index_info('sqlite_autoindex_title_char_ancestors_1')[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mPRAGMA table_info(title_chars)[0m
+  [4;35;1mSQL (0.000000)[0m   [0mPRAGMA index_list(title_chars)[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mPRAGMA index_info('title_chars_parent_title_char_id_index')[0m
+  [4;35;1mSQL (0.000000)[0m   [0mSQLite3::SQLException: no such table: item_title_chars: DROP TABLE item_title_chars[0m
+  [4;36;1mSQL (0.016000)[0m   [0;1mCREATE TABLE item_title_chars ("id" INTEGER PRIMARY KEY NOT NULL, "item_id" integer NOT NULL, "title_char_id" integer NOT NULL) [0m
+  [4;35;1mSQL (0.015000)[0m   [0mCREATE UNIQUE INDEX item_title_chars_title_char_id_index ON item_title_chars (title_char_id, item_id)[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mDROP TABLE items[0m
+  [4;35;1mSQL (0.000000)[0m   [0mCREATE TABLE items ("id" INTEGER PRIMARY KEY NOT NULL, "path" varchar(255) NOT NULL, "title" varchar(255) NOT NULL, "parent_item_id" integer) [0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mSQLite3::SQLException: no such table: title_char_ancestors: DROP TABLE title_char_ancestors[0m
+  [4;35;1mSQL (0.016000)[0m   [0mCREATE TABLE title_char_ancestors ("title_char_id" integer NOT NULL, "title_char_character" varchar(255) NOT NULL, "ancestor_title_char_id" integer) [0m
+  [4;36;1mSQL (0.016000)[0m   [0;1mCREATE INDEX idx_title_char_ancestors_tci ON title_char_ancestors (title_char_id)[0m
+  [4;35;1mSQL (0.000000)[0m   [0mSQLite3::SQLException: object name reserved for internal use: sqlite_autoindex_title_char_ancestors_1: CREATE UNIQUE INDEX sqlite_autoindex_title_char_ancestors_1 ON title_char_ancestors (ancestor_title_char_id, title_char_character, title_char_id)[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mSQLite3::SQLException: table schema_info already exists: CREATE TABLE schema_info (version integer)[0m
+  [4;35;1mSQL (0.000000)[0m   [0mSELECT version FROM schema_info[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mSELECT version FROM schema_info[0m
+  [4;35;1mSQL (0.000000)[0m   [0mSQLite3::SQLException: table schema_info already exists: CREATE TABLE schema_info (version integer)[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mSELECT version FROM schema_info[0m
+Migrating to CreateItemTitleChars (4)
+  [4;35;1mSQL (0.000000)[0m   [0mDROP TABLE item_title_chars[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mUPDATE schema_info SET version = 3[0m
+  [4;35;1mSQL (0.000000)[0m   [0mSELECT version FROM schema_info[0m
+Migrating to CreateTitleCharAncestors (3)
+  [4;36;1mSQL (0.015000)[0m   [0;1mDROP TABLE title_char_ancestors[0m
+  [4;35;1mSQL (0.000000)[0m   [0mdrop trigger trg_title_chars_ai[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mSQLite3::SQLException: no such trigger: trg_title_chars_ad: drop trigger trg_title_chars_ad[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mCREATE TABLE schema_info (version integer)[0m
+  [4;35;1mSQL (0.016000)[0m   [0mINSERT INTO schema_info (version) VALUES(0)[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mSQLite3::SQLException: table schema_info already exists: CREATE TABLE schema_info (version integer)[0m
+  [4;35;1mSQL (0.000000)[0m   [0mSELECT version FROM schema_info[0m
+Migrating to CreateItems (1)
+  [4;36;1mSQL (0.015000)[0m   [0;1mCREATE TABLE items ("id" INTEGER PRIMARY KEY NOT NULL, "path" varchar(255) NOT NULL, "title" varchar(255) NOT NULL, "parent_item_id" integer) [0m
+  [4;35;1mSQL (0.000000)[0m   [0mUPDATE schema_info SET version = 1[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mSELECT version FROM schema_info[0m
+Migrating to CreateTitleChars (2)
+  [4;35;1mSQL (0.016000)[0m   [0mCREATE TABLE title_chars ("id" INTEGER PRIMARY KEY NOT NULL, "character" varchar(255) NOT NULL, "parent_title_char_id" integer) [0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mCREATE UNIQUE INDEX title_chars_parent_title_char_id_index ON title_chars (parent_title_char_id, character)[0m
+  [4;35;1mSQL (0.000000)[0m   [0mUPDATE schema_info SET version = 2[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mSELECT version FROM schema_info[0m
+Migrating to CreateTitleCharAncestors (3)
+  [4;35;1mSQL (0.000000)[0m   [0mSQLite3::SQLException: near ")": syntax error: 
+ create table title_char_ancestors (
+ title_char_id integer not null,
+ 
+ /* for performance reasons, the character of title_char_id is also stored here */
+ title_char_character string not null,
+ 
+ ancestor_title_char_id integer null,
+
+ /* moved compound primary key to explicit unique index to deal with rails limitation
+ primary key (ancestor_title_char_id, title_char_character, title_char_id) */
+ );
+
+ /* for performance reasons, the ancestor id is first and the character of the
+ title char is included in the pkey */
+ create unique index idx_title_char_ancestors on title_char_ancestors(ancestor_title_char_id, title_char_character, title_char_id);
+ [0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mSQLite3::SQLException: table schema_info already exists: CREATE TABLE schema_info (version integer)[0m
+  [4;35;1mSQL (0.000000)[0m   [0mSQLite3::SQLException: table schema_info already exists: CREATE TABLE schema_info (version integer)[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mSELECT version FROM schema_info[0m
+  [4;35;1mSQL (0.000000)[0m   [0mSELECT version FROM schema_info[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mSELECT version FROM schema_info[0m
+Migrating to CreateTitleCharAncestors (3)
+  [4;35;1mSQL (0.016000)[0m   [0m
+ create table title_char_ancestors (
+ title_char_id integer not null,
+ 
+ /* for performance reasons, the character of title_char_id is also stored here */
+ title_char_character string not null,
+ 
+ ancestor_title_char_id integer null/* ,
+
+ moved compound primary key to explicit unique index to deal with rails limitation
+ primary key (ancestor_title_char_id, title_char_character, title_char_id) */
+ );
+
+ /* for performance reasons, the ancestor id is first and the character of the
+ title char is included in the pkey */
+ create unique index idx_title_char_ancestors on title_char_ancestors(ancestor_title_char_id, title_char_character, title_char_id);
+ [0m
+  [4;36;1mSQL (0.000000)[0m   [0;1m
+ /* an index to support the insert trigger above that automatically populates the ancestors table */
+ create index idx_title_char_ancestors_tci on title_char_ancestors(title_char_id)
+ [0m
+  [4;35;1mSQL (0.015000)[0m   [0m
+ /* trigger to populate the title_char_ancestors table on changes to title_chars */
+ create trigger trg_title_chars_ai after insert on title_chars
+ begin
+ /* Insert a record for the character's immediate parent */
+ insert into title_char_ancestors(
+ title_char_id, 
+ title_char_character,
+ ancestor_title_char_id)
+ values (
+ NEW.id,
+ NEW.character,
+ NEW.parent_title_char_id);
+ 
+ /* and copy the immediate parent's ancestors over as well */
+ insert into title_char_ancestors(
+ title_char_id, 
+ title_char_character,
+ ancestor_title_char_id)
+ select
+ NEW.id,
+ NEW.character,
+ tca.ancestor_title_char_id
+ from
+ title_char_ancestors tca
+ where
+ tca.title_char_id = NEW.parent_title_char_id;
+ end;
+ 
+ /*
+ create trigger trg_title_chars_au after update on title_chars
+ begin
+ RAISE(ABORT, 'Title char ancestors maintenance triggers do not support updates yet');
+ end;
+ */
+ 
+ create trigger trg_title_chars_ad after delete on title_chars
+ begin
+ delete from title_char_ancestors where ancestor_title_char_id = OLD.title_char_id;
+ end;
+ [0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mUPDATE schema_info SET version = 3[0m
+  [4;35;1mSQL (0.000000)[0m   [0mSELECT version FROM schema_info[0m
+Migrating to CreateItemTitleChars (4)
+  [4;36;1mSQL (0.000000)[0m   [0;1mCREATE TABLE item_title_chars ("id" INTEGER PRIMARY KEY NOT NULL, "item_id" integer NOT NULL, "title_char_id" integer NOT NULL) [0m
+  [4;35;1mSQL (0.016000)[0m   [0mCREATE UNIQUE INDEX item_title_chars_title_char_id_index ON item_title_chars (title_char_id, item_id)[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mUPDATE schema_info SET version = 4[0m
+  [4;35;1mSQL (0.000000)[0m   [0mSELECT * FROM schema_info[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mSELECT name FROM sqlite_master WHERE type = 'table'[0m
+  [4;35;1mSQL (0.000000)[0m   [0mPRAGMA table_info(item_title_chars)[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mPRAGMA index_list(item_title_chars)[0m
+  [4;35;1mSQL (0.000000)[0m   [0mPRAGMA index_info('item_title_chars_title_char_id_index')[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mPRAGMA table_info(items)[0m
+  [4;35;1mSQL (0.000000)[0m   [0mPRAGMA index_list(items)[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mPRAGMA table_info(title_char_ancestors)[0m
+  [4;35;1mSQL (0.000000)[0m   [0mPRAGMA index_list(title_char_ancestors)[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mPRAGMA index_info('idx_title_char_ancestors_tci')[0m
+  [4;35;1mSQL (0.000000)[0m   [0mPRAGMA table_info(title_chars)[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mPRAGMA index_list(title_chars)[0m
+  [4;35;1mSQL (0.000000)[0m   [0mPRAGMA index_info('title_chars_parent_title_char_id_index')[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mCREATE TABLE schema_info (version integer)[0m
+  [4;35;1mSQL (0.016000)[0m   [0mINSERT INTO schema_info (version) VALUES(0)[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mSQLite3::SQLException: table schema_info already exists: CREATE TABLE schema_info (version integer)[0m
+  [4;35;1mSQL (0.000000)[0m   [0mSELECT version FROM schema_info[0m
+Migrating to CreateItems (1)
+  [4;36;1mSQL (0.000000)[0m   [0;1mCREATE TABLE items ("id" INTEGER PRIMARY KEY NOT NULL, "path" varchar(255) NOT NULL, "title" varchar(255) NOT NULL, "parent_item_id" integer) [0m
+  [4;35;1mSQL (0.016000)[0m   [0mUPDATE schema_info SET version = 1[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mSELECT version FROM schema_info[0m
+Migrating to CreateTitleChars (2)
+  [4;35;1mSQL (0.000000)[0m   [0mCREATE TABLE title_chars ("id" INTEGER PRIMARY KEY NOT NULL, "character" varchar(255) NOT NULL, "parent_title_char_id" integer) [0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mCREATE UNIQUE INDEX title_chars_parent_title_char_id_index ON title_chars (parent_title_char_id, character)[0m
+  [4;35;1mSQL (0.016000)[0m   [0mUPDATE schema_info SET version = 2[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mSELECT version FROM schema_info[0m
+Migrating to CreateTitleCharAncestors (3)
+  [4;35;1mSQL (0.000000)[0m   [0m
+ create table title_char_ancestors (
+ title_char_id integer not null,
+ 
+ /* for performance reasons, the character of title_char_id is also stored here */
+ title_char_character string not null,
+ 
+ ancestor_title_char_id integer null/* ,
+
+ moved compound primary key to explicit unique index to deal with rails limitation
+ primary key (ancestor_title_char_id, title_char_character, title_char_id) */
+ );
+
+ /* for performance reasons, the ancestor id is first and the character of the
+ title char is included in the pkey */
+ create unique index idx_title_char_ancestors on title_char_ancestors(ancestor_title_char_id, title_char_character, title_char_id);
+ [0m
+  [4;36;1mSQL (0.015000)[0m   [0;1m
+ /* an index to support the insert trigger above that automatically populates the ancestors table */
+ create index idx_title_char_ancestors_tci on title_char_ancestors(title_char_id)
+ [0m
+  [4;35;1mSQL (0.000000)[0m   [0m
+ /* trigger to populate the title_char_ancestors table on changes to title_chars */
+ create trigger trg_title_chars_ai after insert on title_chars
+ begin
+ /* Insert a record for the character's immediate parent */
+ insert into title_char_ancestors(
+ title_char_id, 
+ title_char_character,
+ ancestor_title_char_id)
+ values (
+ NEW.id,
+ NEW.character,
+ NEW.parent_title_char_id);
+ 
+ /* and copy the immediate parent's ancestors over as well */
+ insert into title_char_ancestors(
+ title_char_id, 
+ title_char_character,
+ ancestor_title_char_id)
+ select
+ NEW.id,
+ NEW.character,
+ tca.ancestor_title_char_id
+ from
+ title_char_ancestors tca
+ where
+ tca.title_char_id = NEW.parent_title_char_id;
+ end;
+ 
+ /*
+ create trigger trg_title_chars_au after update on title_chars
+ begin
+ RAISE(ABORT, 'Title char ancestors maintenance triggers do not support updates yet');
+ end;
+ */
+ 
+ create trigger trg_title_chars_ad after delete on title_chars
+ begin
+ delete from title_char_ancestors where ancestor_title_char_id = OLD.title_char_id;
+ end;
+ [0m
+  [4;36;1mSQL (0.016000)[0m   [0;1mUPDATE schema_info SET version = 3[0m
+  [4;35;1mSQL (0.000000)[0m   [0mSELECT version FROM schema_info[0m
+Migrating to CreateItemTitleChars (4)
+  [4;36;1mSQL (0.000000)[0m   [0;1mCREATE TABLE item_title_chars ("id" INTEGER PRIMARY KEY NOT NULL, "item_id" integer NOT NULL, "title_char_id" integer NOT NULL) [0m
+  [4;35;1mSQL (0.000000)[0m   [0mCREATE UNIQUE INDEX item_title_chars_title_char_id_index ON item_title_chars (title_char_id, item_id)[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mUPDATE schema_info SET version = 4[0m
+  [4;35;1mSQL (0.000000)[0m   [0mSELECT * FROM schema_info[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mSELECT name FROM sqlite_master WHERE type = 'table'[0m
+  [4;35;1mSQL (0.000000)[0m   [0mPRAGMA table_info(item_title_chars)[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mPRAGMA index_list(item_title_chars)[0m
+  [4;35;1mSQL (0.000000)[0m   [0mPRAGMA index_info('item_title_chars_title_char_id_index')[0m
+  [4;36;1mSQL (0.016000)[0m   [0;1mPRAGMA table_info(items)[0m
+  [4;35;1mSQL (0.000000)[0m   [0mPRAGMA index_list(items)[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mPRAGMA table_info(title_char_ancestors)[0m
+  [4;35;1mSQL (0.000000)[0m   [0mPRAGMA index_list(title_char_ancestors)[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mPRAGMA index_info('idx_title_char_ancestors_tci')[0m
+  [4;35;1mSQL (0.000000)[0m   [0mPRAGMA table_info(title_chars)[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mPRAGMA index_list(title_chars)[0m
+  [4;35;1mSQL (0.000000)[0m   [0mPRAGMA index_info('title_chars_parent_title_char_id_index')[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mSELECT * FROM schema_info[0m
+  [4;35;1mSQL (0.000000)[0m   [0mSELECT name FROM sqlite_master WHERE type = 'table'[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mPRAGMA table_info(item_title_chars)[0m
+  [4;35;1mSQL (0.000000)[0m   [0mPRAGMA index_list(item_title_chars)[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mPRAGMA index_info('item_title_chars_title_char_id_index')[0m
+  [4;35;1mSQL (0.000000)[0m   [0mPRAGMA table_info(items)[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mPRAGMA index_list(items)[0m
+  [4;35;1mSQL (0.000000)[0m   [0mPRAGMA table_info(title_char_ancestors)[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mPRAGMA index_list(title_char_ancestors)[0m
+  [4;35;1mSQL (0.000000)[0m   [0mPRAGMA index_info('idx_title_char_ancestors_tci')[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mPRAGMA table_info(title_chars)[0m
+  [4;35;1mSQL (0.000000)[0m   [0mPRAGMA index_list(title_chars)[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mPRAGMA index_info('title_chars_parent_title_char_id_index')[0m
+  [4;35;1mSQL (0.015000)[0m   [0mDROP TABLE item_title_chars[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mCREATE TABLE item_title_chars ("id" INTEGER PRIMARY KEY NOT NULL, "item_id" integer NOT NULL, "title_char_id" integer NOT NULL) [0m
+  [4;35;1mSQL (0.000000)[0m   [0mCREATE UNIQUE INDEX item_title_chars_title_char_id_index ON item_title_chars (title_char_id, item_id)[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mDROP TABLE items[0m
+  [4;35;1mSQL (0.016000)[0m   [0mCREATE TABLE items ("id" INTEGER PRIMARY KEY NOT NULL, "path" varchar(255) NOT NULL, "title" varchar(255) NOT NULL, "parent_item_id" integer) [0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mDROP TABLE title_char_ancestors[0m
+  [4;35;1mSQL (0.015000)[0m   [0mCREATE TABLE title_char_ancestors ("title_char_id" integer NOT NULL, "title_char_character" varchar(255) NOT NULL, "ancestor_title_char_id" integer) [0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mCREATE INDEX idx_title_char_ancestors_tci ON title_char_ancestors (title_char_id)[0m
+  [4;35;1mSQL (0.000000)[0m   [0mDROP TABLE title_chars[0m
+  [4;36;1mSQL (0.016000)[0m   [0;1mCREATE TABLE title_chars ("id" INTEGER PRIMARY KEY NOT NULL, "character" varchar(255) NOT NULL, "parent_title_char_id" integer) [0m
+  [4;35;1mSQL (0.000000)[0m   [0mCREATE UNIQUE INDEX title_chars_parent_title_char_id_index ON title_chars (parent_title_char_id, character)[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mSQLite3::SQLException: table schema_info already exists: CREATE TABLE schema_info (version integer)[0m
+  [4;35;1mSQL (0.000000)[0m   [0mPRAGMA table_info(schema_info)[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mUPDATE schema_info SET version = 4[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mCREATE TABLE schema_info (version integer)[0m
+  [4;35;1mSQL (0.000000)[0m   [0mINSERT INTO schema_info (version) VALUES(0)[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mSQLite3::SQLException: table schema_info already exists: CREATE TABLE schema_info (version integer)[0m
+  [4;35;1mSQL (0.015000)[0m   [0mSELECT version FROM schema_info[0m
+Migrating to CreateItems (1)
+  [4;36;1mSQL (0.000000)[0m   [0;1mCREATE TABLE items ("id" INTEGER PRIMARY KEY NOT NULL, "path" varchar(255) NOT NULL, "title" varchar(255) NOT NULL, "parent_item_id" integer) [0m
+  [4;35;1mSQL (0.000000)[0m   [0mUPDATE schema_info SET version = 1[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mSELECT version FROM schema_info[0m
+Migrating to CreateTitleChars (2)
+  [4;35;1mSQL (0.016000)[0m   [0mCREATE TABLE title_chars ("id" INTEGER PRIMARY KEY NOT NULL, "character" varchar(255) NOT NULL, "parent_title_char_id" integer) [0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mCREATE UNIQUE INDEX title_chars_parent_title_char_id_index ON title_chars (parent_title_char_id, character)[0m
+  [4;35;1mSQL (0.000000)[0m   [0mUPDATE schema_info SET version = 2[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mSELECT version FROM schema_info[0m
+Migrating to CreateTitleCharAncestors (3)
+  [4;35;1mSQL (0.015000)[0m   [0m
+ create table title_char_ancestors (
+ title_char_id integer not null,
+ 
+ /* for performance reasons, the character of title_char_id is also stored here */
+ title_char_character string not null,
+ 
+ ancestor_title_char_id integer null/* ,
+
+ moved compound primary key to explicit unique index to deal with rails limitation
+ primary key (ancestor_title_char_id, title_char_character, title_char_id) */
+ );
+
+ /* for performance reasons, the ancestor id is first and the character of the
+ title char is included in the pkey */
+ create unique index idx_title_char_ancestors on title_char_ancestors(ancestor_title_char_id, title_char_character, title_char_id);
+ [0m
+  [4;36;1mSQL (0.000000)[0m   [0;1m
+ /* an index to support the insert trigger above that automatically populates the ancestors table */
+ create index idx_title_char_ancestors_tci on title_char_ancestors(title_char_id)
+ [0m
+  [4;35;1mSQL (0.016000)[0m   [0m
+ /* trigger to populate the title_char_ancestors table on changes to title_chars */
+ create trigger trg_title_chars_ai after insert on title_chars
+ begin
+ /* Insert a record for the character's immediate parent */
+ insert into title_char_ancestors(
+ title_char_id, 
+ title_char_character,
+ ancestor_title_char_id)
+ values (
+ NEW.id,
+ NEW.character,
+ NEW.parent_title_char_id);
+ 
+ /* and copy the immediate parent's ancestors over as well */
+ insert into title_char_ancestors(
+ title_char_id, 
+ title_char_character,
+ ancestor_title_char_id)
+ select
+ NEW.id,
+ NEW.character,
+ tca.ancestor_title_char_id
+ from
+ title_char_ancestors tca
+ where
+ tca.title_char_id = NEW.parent_title_char_id;
+ end;
+ 
+ /*
+ create trigger trg_title_chars_au after update on title_chars
+ begin
+ RAISE(ABORT, 'Title char ancestors maintenance triggers do not support updates yet');
+ end;
+ */
+ 
+ create trigger trg_title_chars_ad after delete on title_chars
+ begin
+ delete from title_char_ancestors where ancestor_title_char_id = OLD.title_char_id;
+ end;
+ [0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mUPDATE schema_info SET version = 3[0m
+  [4;35;1mSQL (0.000000)[0m   [0mSELECT version FROM schema_info[0m
+Migrating to CreateItemTitleChars (4)
+  [4;36;1mSQL (0.000000)[0m   [0;1mCREATE TABLE items_title_chars ("id" INTEGER PRIMARY KEY NOT NULL, "item_id" integer NOT NULL, "title_char_id" integer NOT NULL) [0m
+  [4;35;1mSQL (0.016000)[0m   [0mCREATE UNIQUE INDEX items_title_chars_title_char_id_index ON items_title_chars (title_char_id, item_id)[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mUPDATE schema_info SET version = 4[0m
+  [4;35;1mSQL (0.015000)[0m   [0mSELECT * FROM schema_info[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mSELECT name FROM sqlite_master WHERE type = 'table'[0m
+  [4;35;1mSQL (0.000000)[0m   [0mPRAGMA table_info(items)[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mPRAGMA index_list(items)[0m
+  [4;35;1mSQL (0.000000)[0m   [0mPRAGMA table_info(items_title_chars)[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mPRAGMA index_list(items_title_chars)[0m
+  [4;35;1mSQL (0.000000)[0m   [0mPRAGMA index_info('items_title_chars_title_char_id_index')[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mPRAGMA table_info(title_char_ancestors)[0m
+  [4;35;1mSQL (0.000000)[0m   [0mPRAGMA index_list(title_char_ancestors)[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mPRAGMA index_info('idx_title_char_ancestors_tci')[0m
+  [4;35;1mSQL (0.000000)[0m   [0mPRAGMA table_info(title_chars)[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mPRAGMA index_list(title_chars)[0m
+  [4;35;1mSQL (0.000000)[0m   [0mPRAGMA index_info('title_chars_parent_title_char_id_index')[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mSELECT * FROM schema_info[0m
+  [4;35;1mSQL (0.000000)[0m   [0mSELECT name FROM sqlite_master WHERE type = 'table'[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mPRAGMA table_info(items)[0m
+  [4;35;1mSQL (0.000000)[0m   [0mPRAGMA index_list(items)[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mPRAGMA table_info(items_title_chars)[0m
+  [4;35;1mSQL (0.000000)[0m   [0mPRAGMA index_list(items_title_chars)[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mPRAGMA index_info('items_title_chars_title_char_id_index')[0m
+  [4;35;1mSQL (0.000000)[0m   [0mPRAGMA table_info(title_char_ancestors)[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mPRAGMA index_list(title_char_ancestors)[0m
+  [4;35;1mSQL (0.000000)[0m   [0mPRAGMA index_info('idx_title_char_ancestors_tci')[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mPRAGMA table_info(title_chars)[0m
+  [4;35;1mSQL (0.000000)[0m   [0mPRAGMA index_list(title_chars)[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mPRAGMA index_info('title_chars_parent_title_char_id_index')[0m
+  [4;35;1mSQL (0.000000)[0m   [0mSQLite3::SQLException: no such table: items: DROP TABLE items[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mCREATE TABLE items ("id" INTEGER PRIMARY KEY NOT NULL, "path" varchar(255) NOT NULL, "title" varchar(255) NOT NULL, "parent_item_id" integer) [0m
+  [4;35;1mSQL (0.000000)[0m   [0mSQLite3::SQLException: no such table: items_title_chars: DROP TABLE items_title_chars[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mCREATE TABLE items_title_chars ("id" INTEGER PRIMARY KEY NOT NULL, "item_id" integer NOT NULL, "title_char_id" integer NOT NULL) [0m
+  [4;35;1mSQL (0.015000)[0m   [0mCREATE UNIQUE INDEX items_title_chars_title_char_id_index ON items_title_chars (title_char_id, item_id)[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mSQLite3::SQLException: no such table: title_char_ancestors: DROP TABLE title_char_ancestors[0m
+  [4;35;1mSQL (0.000000)[0m   [0mCREATE TABLE title_char_ancestors ("title_char_id" integer NOT NULL, "title_char_character" varchar(255) NOT NULL, "ancestor_title_char_id" integer) [0m
+  [4;36;1mSQL (0.016000)[0m   [0;1mCREATE INDEX idx_title_char_ancestors_tci ON title_char_ancestors (title_char_id)[0m
+  [4;35;1mSQL (0.000000)[0m   [0mSQLite3::SQLException: no such table: title_chars: DROP TABLE title_chars[0m
+  [4;36;1mSQL (0.015000)[0m   [0;1mCREATE TABLE title_chars ("id" INTEGER PRIMARY KEY NOT NULL, "character" varchar(255) NOT NULL, "parent_title_char_id" integer) [0m
+  [4;35;1mSQL (0.000000)[0m   [0mCREATE UNIQUE INDEX title_chars_parent_title_char_id_index ON title_chars (parent_title_char_id, character)[0m
+  [4;36;1mSQL (0.016000)[0m   [0;1mCREATE TABLE schema_info (version integer)[0m
+  [4;35;1mSQL (0.000000)[0m   [0mINSERT INTO schema_info (version) VALUES(0)[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mPRAGMA table_info(schema_info)[0m
+  [4;35;1mSQL (0.000000)[0m   [0mUPDATE schema_info SET version = 4[0m
+  [4;36;1mSQL (0.016000)[0m   [0;1mCREATE TABLE schema_info (version integer)[0m
+  [4;35;1mSQL (0.000000)[0m   [0mINSERT INTO schema_info (version) VALUES(0)[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mSQLite3::SQLException: table schema_info already exists: CREATE TABLE schema_info (version integer)[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mSQLite3::SQLException: table schema_info already exists: CREATE TABLE schema_info (version integer)[0m
+  [4;35;1mSQL (0.000000)[0m   [0mSQLite3::SQLException: table schema_info already exists: CREATE TABLE schema_info (version integer)[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mSQLite3::SQLException: table schema_info already exists: CREATE TABLE schema_info (version integer)[0m
+  [4;35;1mSQL (0.000000)[0m   [0mSQLite3::SQLException: table schema_info already exists: CREATE TABLE schema_info (version integer)[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mSQLite3::SQLException: table schema_info already exists: CREATE TABLE schema_info (version integer)[0m
+  [4;35;1mSQL (0.000000)[0m   [0mSQLite3::SQLException: table schema_info already exists: CREATE TABLE schema_info (version integer)[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mSELECT version FROM schema_info[0m
+Migrating to CreateItems (1)
+  [4;35;1mSQL (0.015000)[0m   [0mCREATE TABLE items ("id" INTEGER PRIMARY KEY NOT NULL, "path" varchar(255) NOT NULL, "title" varchar(255) NOT NULL, "parent_item_id" integer) [0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mUPDATE schema_info SET version = 1[0m
+  [4;35;1mSQL (0.000000)[0m   [0mSELECT version FROM schema_info[0m
+Migrating to CreateTitleChars (2)
+  [4;36;1mSQL (0.016000)[0m   [0;1mCREATE TABLE title_chars ("id" INTEGER PRIMARY KEY NOT NULL, "character" varchar(255) NOT NULL, "parent_title_char_id" integer) [0m
+  [4;35;1mSQL (0.000000)[0m   [0mCREATE UNIQUE INDEX title_chars_parent_title_char_id_index ON title_chars (parent_title_char_id, character)[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mUPDATE schema_info SET version = 2[0m
+  [4;35;1mSQL (0.000000)[0m   [0mSELECT version FROM schema_info[0m
+Migrating to CreateTitleCharAncestors (3)
+  [4;36;1mSQL (0.000000)[0m   [0;1m
+ create table title_char_ancestors (
+ title_char_id integer not null,
+ 
+ /* for performance reasons, the character of title_char_id is also stored here */
+ title_char_character string not null,
+ 
+ ancestor_title_char_id integer null/* ,
+
+ moved compound primary key to explicit unique index to deal with rails limitation
+ primary key (ancestor_title_char_id, title_char_character, title_char_id) */
+ );
+
+ /* for performance reasons, the ancestor id is first and the character of the
+ title char is included in the pkey */
+ create unique index idx_title_char_ancestors on title_char_ancestors(ancestor_title_char_id, title_char_character, title_char_id);
+ [0m
+  [4;35;1mSQL (0.015000)[0m   [0m
+ /* an index to support the insert trigger above that automatically populates the ancestors table */
+ create index idx_title_char_ancestors_tci on title_char_ancestors(title_char_id)
+ [0m
+  [4;36;1mSQL (0.000000)[0m   [0;1m
+ /* trigger to populate the title_char_ancestors table on changes to title_chars */
+ create trigger trg_title_chars_ai after insert on title_chars
+ begin
+ /* Insert a record for the character's immediate parent */
+ insert into title_char_ancestors(
+ title_char_id, 
+ title_char_character,
+ ancestor_title_char_id)
+ values (
+ NEW.id,
+ NEW.character,
+ NEW.parent_title_char_id);
+ 
+ /* and copy the immediate parent's ancestors over as well */
+ insert into title_char_ancestors(
+ title_char_id, 
+ title_char_character,
+ ancestor_title_char_id)
+ select
+ NEW.id,
+ NEW.character,
+ tca.ancestor_title_char_id
+ from
+ title_char_ancestors tca
+ where
+ tca.title_char_id = NEW.parent_title_char_id;
+ end;
+ 
+ /*
+ create trigger trg_title_chars_au after update on title_chars
+ begin
+ RAISE(ABORT, 'Title char ancestors maintenance triggers do not support updates yet');
+ end;
+ */
+ 
+ create trigger trg_title_chars_ad after delete on title_chars
+ begin
+ delete from title_char_ancestors where ancestor_title_char_id = OLD.title_char_id;
+ end;
+ [0m
+  [4;35;1mSQL (0.000000)[0m   [0mUPDATE schema_info SET version = 3[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mSELECT version FROM schema_info[0m
+Migrating to CreateItemTitleChars (4)
+  [4;35;1mSQL (0.000000)[0m   [0mCREATE TABLE items_title_chars ("item_id" integer NOT NULL, "title_char_id" integer NOT NULL) [0m
+  [4;36;1mSQL (0.016000)[0m   [0;1mCREATE UNIQUE INDEX items_title_chars_title_char_id_index ON items_title_chars (title_char_id, item_id)[0m
+  [4;35;1mSQL (0.000000)[0m   [0mUPDATE schema_info SET version = 4[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mSELECT * FROM schema_info[0m
+  [4;35;1mSQL (0.000000)[0m   [0mSELECT name FROM sqlite_master WHERE type = 'table'[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mPRAGMA table_info(items)[0m
+  [4;35;1mSQL (0.000000)[0m   [0mPRAGMA index_list(items)[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mPRAGMA table_info(items_title_chars)[0m
+  [4;35;1mSQL (0.000000)[0m   [0mPRAGMA index_list(items_title_chars)[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mPRAGMA index_info('items_title_chars_title_char_id_index')[0m
+  [4;35;1mSQL (0.000000)[0m   [0mPRAGMA table_info(title_char_ancestors)[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mPRAGMA index_list(title_char_ancestors)[0m
+  [4;35;1mSQL (0.000000)[0m   [0mPRAGMA index_info('idx_title_char_ancestors_tci')[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mPRAGMA table_info(title_chars)[0m
+  [4;35;1mSQL (0.000000)[0m   [0mPRAGMA index_list(title_chars)[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mPRAGMA index_info('title_chars_parent_title_char_id_index')[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mSELECT * FROM schema_info[0m
+  [4;35;1mSQL (0.000000)[0m   [0mSELECT name FROM sqlite_master WHERE type = 'table'[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mPRAGMA table_info(items)[0m
+  [4;35;1mSQL (0.000000)[0m   [0mPRAGMA index_list(items)[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mPRAGMA table_info(items_title_chars)[0m
+  [4;35;1mSQL (0.000000)[0m   [0mPRAGMA index_list(items_title_chars)[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mPRAGMA index_info('items_title_chars_title_char_id_index')[0m
+  [4;35;1mSQL (0.000000)[0m   [0mPRAGMA table_info(title_char_ancestors)[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mPRAGMA index_list(title_char_ancestors)[0m
+  [4;35;1mSQL (0.000000)[0m   [0mPRAGMA index_info('idx_title_char_ancestors_tci')[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mPRAGMA table_info(title_chars)[0m
+  [4;35;1mSQL (0.000000)[0m   [0mPRAGMA index_list(title_chars)[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mPRAGMA index_info('title_chars_parent_title_char_id_index')[0m
+  [4;35;1mSQL (0.000000)[0m   [0mSQLite3::SQLException: no such table: items: DROP TABLE items[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mCREATE TABLE items ("id" INTEGER PRIMARY KEY NOT NULL, "path" varchar(255) NOT NULL, "title" varchar(255) NOT NULL, "parent_item_id" integer) [0m
+  [4;35;1mSQL (0.000000)[0m   [0mSQLite3::SQLException: no such table: items_title_chars: DROP TABLE items_title_chars[0m
+  [4;36;1mSQL (0.015000)[0m   [0;1mCREATE TABLE items_title_chars ("item_id" integer NOT NULL, "title_char_id" integer NOT NULL) [0m
+  [4;35;1mSQL (0.000000)[0m   [0mCREATE UNIQUE INDEX items_title_chars_title_char_id_index ON items_title_chars (title_char_id, item_id)[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mSQLite3::SQLException: no such table: title_char_ancestors: DROP TABLE title_char_ancestors[0m
+  [4;35;1mSQL (0.000000)[0m   [0mCREATE TABLE title_char_ancestors ("title_char_id" integer NOT NULL, "title_char_character" varchar(255) NOT NULL, "ancestor_title_char_id" integer) [0m
+  [4;36;1mSQL (0.016000)[0m   [0;1mCREATE INDEX idx_title_char_ancestors_tci ON title_char_ancestors (title_char_id)[0m
+  [4;35;1mSQL (0.000000)[0m   [0mSQLite3::SQLException: no such table: title_chars: DROP TABLE title_chars[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mCREATE TABLE title_chars ("id" INTEGER PRIMARY KEY NOT NULL, "character" varchar(255) NOT NULL, "parent_title_char_id" integer) [0m
+  [4;35;1mSQL (0.016000)[0m   [0mCREATE UNIQUE INDEX title_chars_parent_title_char_id_index ON title_chars (parent_title_char_id, character)[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mCREATE TABLE schema_info (version integer)[0m
+  [4;35;1mSQL (0.000000)[0m   [0mINSERT INTO schema_info (version) VALUES(0)[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mPRAGMA table_info(schema_info)[0m
+  [4;35;1mSQL (0.015000)[0m   [0mUPDATE schema_info SET version = 4[0m
+  [4;36;1mSQL (0.032000)[0m   [0;1mCREATE TABLE schema_info (version integer)[0m
+  [4;35;1mSQL (0.000000)[0m   [0mINSERT INTO schema_info (version) VALUES(0)[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mSQLite3::SQLException: table schema_info already exists: CREATE TABLE schema_info (version integer)[0m
+  [4;35;1mSQL (0.000000)[0m   [0mSELECT version FROM schema_info[0m
+Migrating to CreateItems (1)
+  [4;36;1mSQL (0.016000)[0m   [0;1mCREATE TABLE items ("id" INTEGER PRIMARY KEY NOT NULL, "path" varchar(255) NOT NULL, "title" varchar(255) NOT NULL, "parent_item_id" integer) [0m
+  [4;35;1mSQL (0.000000)[0m   [0mUPDATE schema_info SET version = 1[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mSELECT version FROM schema_info[0m
+Migrating to CreateTitleChars (2)
+  [4;35;1mSQL (0.016000)[0m   [0mCREATE TABLE title_chars ("id" INTEGER PRIMARY KEY NOT NULL, "character" varchar(255) NOT NULL, "parent_title_char_id" integer) [0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mCREATE UNIQUE INDEX title_chars_parent_title_char_id_index ON title_chars (parent_title_char_id, character)[0m
+  [4;35;1mSQL (0.000000)[0m   [0mUPDATE schema_info SET version = 2[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mSELECT version FROM schema_info[0m
+Migrating to CreateTitleCharAncestors (3)
+  [4;35;1mSQL (0.000000)[0m   [0m
+ create table title_char_ancestors (
+ title_char_id integer not null,
+ 
+ /* for performance reasons, the character of title_char_id is also stored here */
+ title_char_character string not null,
+ 
+ ancestor_title_char_id integer null/* ,
+
+ moved compound primary key to explicit unique index to deal with rails limitation
+ primary key (ancestor_title_char_id, title_char_character, title_char_id) */
+ );
+
+ /* for performance reasons, the ancestor id is first and the character of the
+ title char is included in the pkey */
+ create unique index idx_title_char_ancestors on title_char_ancestors(ancestor_title_char_id, title_char_character, title_char_id);
+ [0m
+  [4;36;1mSQL (0.000000)[0m   [0;1m
+ /* an index to support the insert trigger above that automatically populates the ancestors table */
+ create index idx_title_char_ancestors_tci on title_char_ancestors(title_char_id)
+ [0m
+  [4;35;1mSQL (0.016000)[0m   [0m
+ /* trigger to populate the title_char_ancestors table on changes to title_chars */
+ create trigger trg_title_chars_ai after insert on title_chars
+ begin
+ /* Insert a record for the character's immediate parent */
+ insert into title_char_ancestors(
+ title_char_id, 
+ title_char_character,
+ ancestor_title_char_id)
+ values (
+ NEW.id,
+ NEW.character,
+ NEW.parent_title_char_id);
+ 
+ /* and copy the immediate parent's ancestors over as well */
+ insert into title_char_ancestors(
+ title_char_id, 
+ title_char_character,
+ ancestor_title_char_id)
+ select
+ NEW.id,
+ NEW.character,
+ tca.ancestor_title_char_id
+ from
+ title_char_ancestors tca
+ where
+ tca.title_char_id = NEW.parent_title_char_id;
+ end;
+ 
+ /*
+ create trigger trg_title_chars_au after update on title_chars
+ begin
+ RAISE(ABORT, 'Title char ancestors maintenance triggers do not support updates yet');
+ end;
+ */
+ 
+ create trigger trg_title_chars_ad after delete on title_chars
+ begin
+ delete from title_char_ancestors where ancestor_title_char_id = OLD.title_char_id;
+ end;
+ [0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mUPDATE schema_info SET version = 3[0m
+  [4;35;1mSQL (0.000000)[0m   [0mSELECT version FROM schema_info[0m
+Migrating to CreateItemTitleChars (4)
+  [4;36;1mSQL (0.000000)[0m   [0;1mCREATE TABLE items_title_chars ("item_id" integer NOT NULL, "title_char_id" integer NOT NULL) [0m
+  [4;35;1mSQL (0.015000)[0m   [0mCREATE INDEX items_title_chars_title_char_id_index ON items_title_chars (title_char_id, item_id)[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mUPDATE schema_info SET version = 4[0m
+  [4;35;1mSQL (0.000000)[0m   [0mSELECT * FROM schema_info[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mSELECT name FROM sqlite_master WHERE type = 'table'[0m
+  [4;35;1mSQL (0.016000)[0m   [0mPRAGMA table_info(items)[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mPRAGMA index_list(items)[0m
+  [4;35;1mSQL (0.000000)[0m   [0mPRAGMA table_info(items_title_chars)[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mPRAGMA index_list(items_title_chars)[0m
+  [4;35;1mSQL (0.000000)[0m   [0mPRAGMA index_info('items_title_chars_title_char_id_index')[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mPRAGMA table_info(title_char_ancestors)[0m
+  [4;35;1mSQL (0.000000)[0m   [0mPRAGMA index_list(title_char_ancestors)[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mPRAGMA index_info('idx_title_char_ancestors_tci')[0m
+  [4;35;1mSQL (0.000000)[0m   [0mPRAGMA table_info(title_chars)[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mPRAGMA index_list(title_chars)[0m
+  [4;35;1mSQL (0.000000)[0m   [0mPRAGMA index_info('title_chars_parent_title_char_id_index')[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mSELECT * FROM schema_info[0m
+  [4;35;1mSQL (0.000000)[0m   [0mSELECT name FROM sqlite_master WHERE type = 'table'[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mPRAGMA table_info(items)[0m
+  [4;35;1mSQL (0.000000)[0m   [0mPRAGMA index_list(items)[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mPRAGMA table_info(items_title_chars)[0m
+  [4;35;1mSQL (0.000000)[0m   [0mPRAGMA index_list(items_title_chars)[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mPRAGMA index_info('items_title_chars_title_char_id_index')[0m
+  [4;35;1mSQL (0.000000)[0m   [0mPRAGMA table_info(title_char_ancestors)[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mPRAGMA index_list(title_char_ancestors)[0m
+  [4;35;1mSQL (0.000000)[0m   [0mPRAGMA index_info('idx_title_char_ancestors_tci')[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mPRAGMA table_info(title_chars)[0m
+  [4;35;1mSQL (0.000000)[0m   [0mPRAGMA index_list(title_chars)[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mPRAGMA index_info('title_chars_parent_title_char_id_index')[0m
+  [4;35;1mSQL (0.000000)[0m   [0mSQLite3::SQLException: no such table: items: DROP TABLE items[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mCREATE TABLE items ("id" INTEGER PRIMARY KEY NOT NULL, "path" varchar(255) NOT NULL, "title" varchar(255) NOT NULL, "parent_item_id" integer) [0m
+  [4;35;1mSQL (0.000000)[0m   [0mSQLite3::SQLException: no such table: items_title_chars: DROP TABLE items_title_chars[0m
+  [4;36;1mSQL (0.016000)[0m   [0;1mCREATE TABLE items_title_chars ("item_id" integer NOT NULL, "title_char_id" integer NOT NULL) [0m
+  [4;35;1mSQL (0.000000)[0m   [0mCREATE INDEX items_title_chars_title_char_id_index ON items_title_chars (title_char_id, item_id)[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mSQLite3::SQLException: no such table: title_char_ancestors: DROP TABLE title_char_ancestors[0m
+  [4;35;1mSQL (0.015000)[0m   [0mCREATE TABLE title_char_ancestors ("title_char_id" integer NOT NULL, "title_char_character" varchar(255) NOT NULL, "ancestor_title_char_id" integer) [0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mCREATE INDEX idx_title_char_ancestors_tci ON title_char_ancestors (title_char_id)[0m
+  [4;35;1mSQL (0.000000)[0m   [0mSQLite3::SQLException: no such table: title_chars: DROP TABLE title_chars[0m
+  [4;36;1mSQL (0.016000)[0m   [0;1mCREATE TABLE title_chars ("id" INTEGER PRIMARY KEY NOT NULL, "character" varchar(255) NOT NULL, "parent_title_char_id" integer) [0m
+  [4;35;1mSQL (0.000000)[0m   [0mCREATE UNIQUE INDEX title_chars_parent_title_char_id_index ON title_chars (parent_title_char_id, character)[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mCREATE TABLE schema_info (version integer)[0m
+  [4;35;1mSQL (0.016000)[0m   [0mINSERT INTO schema_info (version) VALUES(0)[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mPRAGMA table_info(schema_info)[0m
+  [4;35;1mSQL (0.000000)[0m   [0mUPDATE schema_info SET version = 4[0m
