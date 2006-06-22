@@ -50,20 +50,16 @@ def canonicalize_title(title)
 end
 
 def build_char_nodes(db, item_id, canon_title)
-    ancestor_stack = Array.new()
+    #ancestor_stack = Array.new()
 
-    ancestor_stack << nil
+    #ancestor_stack << nil
+
+    last_title_char_id = nil
     
     canon_title.scan(/./) do |char|
-        title_char_id = create_title_char(db, char, ancestor_stack.last)
-        
-        ancestor_stack.each do |ancestor_char_id|
-            create_title_char_ancestor(db, title_char_id, ancestor_char_id)
-        end
+        last_title_char_id = create_title_char(db, char, last_title_char_id)
 
-        ancestor_stack << title_char_id
-
-        associate_title_char_with_item(db, title_char_id, item_id)
+        associate_title_char_with_item(db, last_title_char_id, item_id)
     end
 end
 
@@ -100,12 +96,6 @@ def create_title_char(db, char, parent_title_char_id)
     return id
 end
 
-def create_title_char_ancestor(db, title_char_id, ancestor_title_char_id)
-    db.execute("insert or replace into title_char_ancestors(title_char_node_id, ancestor_title_char_node_id) values (:id, :ancestor_id)",
-        ":id" => title_char_id,
-        ":ancestor_id" => ancestor_title_char_id)
-end
-
 def associate_title_char_with_item(db, title_char_id, item_id)
     db.execute("insert into item_title_chars(item_id, title_char_id) values (:id, :char_id)",
         ":id" => item_id,
@@ -114,12 +104,30 @@ end
 
 File.delete("catalog.db") if File.exist?("catalog.db")
 db = SQLite3::Database.new("catalog.db")
+#db = SQLite3::Database.new(":memory:")
+
+startTime = Time.now
+
 db.execute_batch(IO.read("schema.sql"))
 
 catalog_path = "g:\\docs\\archive\\files from aragorn"
+#catalog_path = "g:\\docs\\cryptos"
 
 db.transaction do |db|
     process_dir(db, catalog_path, nil)
 end
 
+endTime = Time.now
 
+totalItems = db.get_first_value("select count(id) from items").to_i
+
+totalSeconds = endTime.to_f - startTime.to_f
+
+itemsPerSecond = (totalItems / totalSeconds)
+
+printf("%d items processed in %.2f seconds (%.2f items/second)",
+    totalItems,
+    totalSeconds,
+    itemsPerSecond)
+
+    

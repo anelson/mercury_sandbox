@@ -27,36 +27,27 @@ def execute_search_level(db, level, char)
     if level == 0
         # Populate where ancestor id is null
         search_sql << "
-            select distinct tc.id 
+            select distinct tca.title_char_id 
             from 
                 title_char_ancestors tca 
-                inner join
-                title_chars tc
-                on
-                    tc.id = tca.title_char_node_id 
             where 
-                tca.ancestor_title_char_node_id is null
+                tca.ancestor_title_char_id is null
                 and
-                tc.character = :char
+                tca.title_char_character = :char
             "
     else 
         #Populate where the ancestor is in the previous search table
         search_sql << "
-            select distinct tc.id 
+            select distinct tca.title_char_id
             from 
                 search#{level-1} s
                 
                 inner join
                 title_char_ancestors tca
                 on
-                    tca.ancestor_title_char_node_id = s.title_char_id
-
-                inner join
-                title_chars tc
-                on
-                    tc.id = tca.title_char_node_id
+                    tca.ancestor_title_char_id = s.title_char_id
             where 
-                tc.character = :char
+                tca.title_char_character = :char
             "
     end
 
@@ -96,12 +87,11 @@ end
 
 db = SQLite3::Database.new("catalog.db")
 
-#
-db.trace() { |data, sql| 
-    puts "/* sql run at #{Time.now} */"
-    puts sql
-    puts
-}
+#db.trace() { |data, sql| 
+#    puts "/* sql run at #{Time.now} */"
+#    puts sql
+#    puts
+#}
 
 db.execute("pragma temp_store = memory;")
 
@@ -110,12 +100,18 @@ while true
     search = gets
 
     break if search =~ /^$/
-    
+
+    startTime = Time.now
     matching_rows = search_catalog(db, search)
 
     matching_rows.each do |row| 
         # puts "#{row[1]} (#{row[0]}) at #{row[2]}"
     end
+    endTime = Time.now
 
-    puts "#{matching_rows.length} item(s) matched"
+    totalTime = endTime.to_f - startTime.to_f;
+
+    printf "#{matching_rows.length} item(s) matched in %.2f seconds\n", totalTime
 end
+
+
