@@ -81,6 +81,9 @@
 			<F N="javascript/unittest.js"/>
 		</Folder>
 		<F N="autocompletetest.html"/>
+		<F N="build_catalog.rb"/>
 		<F N="default.css"/>
+		<F N="schema.sql"/>
+		<F N="search_catalog.rb"/>
 	</Files>
 </Project>
