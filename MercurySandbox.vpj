@@ -73,6 +73,10 @@
 			</Folder>
 			<Folder Name="helpers">
 				<F N="app/helpers/application_helper.rb"/>
+				<F N="app/helpers/match_scorer.rb"/>
+				<F N="app/helpers/normalizer.rb"/>
+				<F N="app/helpers/ranker.rb"/>
+				<F N="app/helpers/score_aggregator.rb"/>
 			</Folder>
 			<Folder Name="models">
 				<F N="app/models/item.rb"/>
@@ -97,6 +101,7 @@
 				<F N="db/migrate/003_create_title_char_ancestors.rb"/>
 				<F N="db/migrate/004_create_item_title_chars.rb"/>
 			</Folder>
+			<F N="db/greptest.rb"/>
 			<F N="db/schema.rb"/>
 		</Folder>
 		<Folder Name="doc">
@@ -170,6 +175,10 @@
 			<Folder Name="unit">
 				<F N="test/unit/item_test.rb"/>
 				<F N="test/unit/item_title_char_test.rb"/>
+				<F N="test/unit/match_scorer_tests.rb"/>
+				<F N="test/unit/normalizer_test.rb"/>
+				<F N="test/unit/ranker.rb"/>
+				<F N="test/unit/score_aggregator.rb"/>
 				<F N="test/unit/title_char_test.rb"/>
 			</Folder>
 			<F N="test/test_helper.rb"/>
@@ -177,6 +186,7 @@
 		<F N="build_catalog.rb"/>
 		<F N="catalog.db"/>
 		<F N="default.css"/>
+		<F N="greptest.rb"/>
 		<F N="nifty.js"/>
 		<F N="niftyCorners.css"/>
 		<F N="niftylayout.css"/>
