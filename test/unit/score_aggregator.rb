@@ -102,5 +102,24 @@ class ScoreAggregatorTest < Test::Unit::TestCase
     assert_equal(2, ranks[1])
     assert_equal(1, ranks[2])
   end
+
+  def test_order_by_percentile_score_two_source
+    inputs = [
+      [30,20],# index 0
+      [10,10],# index 1
+      [20,30] # index 2
+    ]
+
+    ranks = ScoreAggregator.rank_and_order_by_aggregate_score(inputs)
+
+    assert_equal(3, ranks.length)
+
+    # either the 30 and 20 item (index 0) or the 20 and 30 item (index 2)
+    # can be in first; they are tied.  The 10 and 10 item (index 1) is clearly
+    # second
+    assert_equal(1, ranks[0])
+    assert_equal(2, ranks[1])
+    assert_equal(1, ranks[2])
+  end
 end
 

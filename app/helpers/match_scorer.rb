@@ -1,6 +1,11 @@
 require File.dirname(__FILE__) + '/normalizer'
 
 class MatchScorer
+  SCORE_WORD_BOUNDARY = 0x01
+  SCORE_PRECEEDING_CHAR = 0x02
+  SCORE_SUCCEEDING_CHAR = 0x04
+  SCORE_SURROUNDED_CHAR = (SCORE_PRECEEDING_CHAR | SCORE_SUCCEEDING_CHAR)
+
   # Scores the strength of the match of 'search' in 'title'.
   #
   # Note that all characters in 'search' must appear, in order, in 'title'.
@@ -12,73 +17,188 @@ class MatchScorer
             caller)
     end
 
-    scores = [
-      MatchScorer.first_letter_score(search, title),
-      MatchScorer.area_of_title_matched_score(search, title),
-      MatchScorer.letter_match_spread_score(search, title)
-    ]
+    search_positions, search_char_flags = MatchScorer.find_search_chars_in_title(search, title)
 
-    return scores
+    return MatchScorer.simple_score(search_positions, search_char_flags)
   end
 
-  def MatchScorer.first_letter_score(search, title)
-    # Proximity of search letters to the start of words
-    # The number of words in a title is the number of word separators in the title, plus one
-    num_words = title.scan(WORD_SEPARATOR).size.to_f + 1
+  def MatchScorer.find_search_chars_in_title(search, title)
+    search_char_flags = Array.new(search.length)
 
-    # Build a regex that matches each of the search letters at the start of a word
-    ws = Regexp.escape(WORD_SEPARATOR)
-    working_title = ws + title
+    search_char_flags.each_with_index do |dontcare, idx|
+      search_char_flags[idx] = 0
+    end
 
-    num_leading_letters = 0.0
-    idx = 0
+    search_positions = MatchScorer.find_rightmost_char_positions(search, title)
 
-    re = Regexp.new("#{ws}(.)")
+    MatchScorer.mark_word_boundaries(search, title, search_positions, search_char_flags)
 
-    match = re.match(working_title)
-
-    while match != nil do 
-      if match[1] == search[idx,1]
-        num_leading_letters += 1
-        idx += 1
+    # Leaving the position of the word boundary letters fixed, change the search positions
+    # of the non-word-boundary characters to the left-most possible
+    prev_pos = 0
+    search_positions.each_with_index do |pos, idx|
+      if ! (search_char_flags[idx] & SCORE_WORD_BOUNDARY == SCORE_WORD_BOUNDARY)
+        search_positions[idx] = title.index(search[idx,1], prev_pos)
       end
 
-      match = re.match(match.post_match)
+      prev_pos = search_positions[idx] + 1
     end
 
-    # TODO: Maybe compute num_leading_letters / search.length, and use num_leading_letters / num_words as 
-    # a tie-breaker
-    return (num_leading_letters / num_words) * (num_leading_letters / search.length)
-  end
+    # Compute the non-word-boundary search char flags
+    search_char_flags.each_with_index do |flags, idx|
+      if (flags & SCORE_WORD_BOUNDARY == SCORE_WORD_BOUNDARY)
+        next
+      end
 
-  def MatchScorer.area_of_title_matched_score(search, title)
-    # Compute the proportion of the total title length contained between the first
-    # and last matching character
-    return get_match_coverage_area(search, title) / title.length.to_f
-  end
+      # Preceeding char?
+      if idx > 0 && search_positions[idx-1] == search_positions[idx] - 1
+        #Yes
+        search_char_flags[idx] |= SCORE_PRECEEDING_CHAR
 
-  def MatchScorer.letter_match_spread_score(search, title)
-    # Compute the extent to which the matching search letters are spread about amid the title
-    return search.length.to_f / get_match_coverage_area(search, title)
-  end
+        #If this is the last character in the title, it also gets the 
+        #succeeding char flag
+        if search_positions[idx] == title.length - 1
+          search_char_flags[idx] |= SCORE_SUCCEEDING_CHAR
+        end
+      end
 
-  def MatchScorer.get_match_coverage_area(search, title)
-    # Compute the length of the substring of 'title' which contains all of the chars in
-    # 'search', in order of appearnce
-    regex = ""
-
-    search.scan(/./) do |char|
-      regex << char << ".*?"
+      # Succeeding char?
+      if idx < search_positions.length - 1 && search_positions[idx+1] == search_positions[idx] + 1
+        # Yes
+        search_char_flags[idx] |= SCORE_SUCCEEDING_CHAR
+      end
     end
 
-    regex.chomp!(".*?")
+    [search_positions, search_char_flags]
+  end
 
-    match = Regexp.new(regex).match(title)
+  def MatchScorer.find_rightmost_char_positions(search, title)
+    search_positions = Array.new(search.length)
 
-    raise(ArgumentError, 
-        "Not all chars in search term '#{search}' present in title '#{title}'", 
-        caller) unless match != nil
+    # Starting from the last search char and the end of the title and 
+    # working backwards, find the right-most possible index for each char in the search
+    prev_pos = -1
+    (0..search.length-1).step(1) do |from_left_idx|
+      idx = search.length - 1 - from_left_idx
 
-    match[0].length.to_f
+      search_positions[idx] = title.rindex(search[idx,1], prev_pos)
+
+      if search_positions[idx] == nil
+        raise(ArgumentError,
+              "The search character #{search[idx,1]} not found by '#{title}'.rindex('#{search[idx,1]}', #{prev_pos-1})",
+              caller)
+      end
+
+      prev_pos = search_positions[idx] - 1
+    end
+
+    search_positions
+  end
+
+  def MatchScorer.mark_word_boundaries(search, title, search_positions, search_char_flags)
+    # Check for search letters at the start of words, at positions equal to or earlier than
+    # the right-most positions found above
+    word_start_positions, word_start_characters = MatchScorer.find_word_starts(title)
+    word_idx = 0
+
+    search_positions.each_with_index do |val, idx|
+      search_char = search[idx,1]
+
+      #Does the character at this index start a word?
+      temp_idx = word_start_characters[word_idx..-1].index(search_char)
+
+      if temp_idx != nil && word_start_positions[temp_idx] <= val
+        #A word starting with this character is present in the string on or before
+        #the right-most occurence of this char.
+        search_char_flags[idx] = SCORE_WORD_BOUNDARY
+        word_idx = temp_idx+1
+
+        if word_idx == word_start_characters.length
+          #No more words
+          break
+        end
+      else
+        #No word starting with this character.  pick up the word-start search for subsequent
+        #characters, after the nearest occurence of this character.  
+        nearest_char_idx = title.index(search[idx,1], word_start_positions[word_idx])
+
+        if nearest_char_idx == nil
+          #This character isn't present past the current word, which means no further
+          #characters will be either; abort the search
+          break
+        end
+
+        #Find the first word start index AFTER this char
+        word_idx = nil
+        word_start_positions.each_with_index do |pos, wsp_idx|
+          if pos > nearest_char_idx
+            word_idx = wsp_idx
+            break
+          end
+        end
+
+        if word_idx == nil
+          #No more word starts; that's the last of the search terms that align on
+          #word boundaries
+          break
+        end
+      end
+    end
+  end
+
+  def MatchScorer.find_word_starts(title)
+    word_start_positions = []
+    word_start_characters = []
+
+    match_offset = 0
+    re = Regexp.new("#{Regexp.escape(WORD_SEPARATOR)}(.)")
+
+    #the first match is the first letter in the title; subsequent matches are
+    #letters following word separators
+    match = /^(.)/.match(title)
+
+    while match != nil do 
+      # The position of this match, relative to the start of the title
+      word_start_positions << match_offset + match.offset(1)[0]
+      word_start_characters << match[1]
+
+      # Add the ending offset of the entire string matched by the regex, to compute
+      # the index relative to the start of the title to search next
+      match_offset += match.offset(0)[1] 
+      match = re.match(title[match_offset..-1])
+    end
+
+    return word_start_positions, word_start_characters
+  end
+
+  def MatchScorer.simple_score(search_positions, search_char_flags)
+    max_per_char_score = 1.0/search_positions.length.to_f
+
+    total_score = 0.0
+
+    search_char_flags.each do |flags|
+      if (flags & SCORE_WORD_BOUNDARY == SCORE_WORD_BOUNDARY) || 
+         (flags & SCORE_SURROUNDED_CHAR == SCORE_SURROUNDED_CHAR)
+        total_score += max_per_char_score
+      elsif (flags & SCORE_PRECEEDING_CHAR == SCORE_PRECEEDING_CHAR) || 
+            (flags & SCORE_SUCCEEDING_CHAR == SCORE_SUCCEEDING_CHAR)
+        total_score += (max_per_char_score / 2.0)
+      end
+    end
+
+    #Absurdly, Ruby's Float type can introduce rounding errors here, such that
+    #floats that appear the same vary slightly.  As a horrifically kludgy workaround,
+    #convert to string and back
+    total_score.to_s.to_f
+
+    #To reproduce this problem, score a title with five words, and a five-letter search term,
+    #with three letters matching word boundaries and two letters matching nothing.
+    #the score should be 3.0/5.0, but the following code will fail, reporting a tiny
+    #(on the order of 1.0e-16) difference
+    #
+    #if total_score != (3.0/5.0) 
+    #  puts total_score - (3.0/5.0) # Outputs something like 1.11022302462516e-016
+    #  raise
+    #end
   end
 end

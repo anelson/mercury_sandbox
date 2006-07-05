@@ -40,4 +40,16 @@ class ScoreAggregator
 
     ScoreAggregator.order_by_aggregate_rank(rank_sets.transpose)
   end
+
+  # Given a multi-dimensional array of scores, ranks each dimension of scores first, 
+  # then computes an aggregate score as order_by_aggregate_rank
+  def ScoreAggregator.normalize_rank_and_order_by_aggregate_score(score_sets)
+    rank_sets = []
+
+    score_sets.transpose.each do |scores|
+      rank_sets << Ranker.rank_by_score(Ranker.scores_to_percentiles(scores))
+    end
+
+    ScoreAggregator.order_by_aggregate_rank(rank_sets.transpose)
+  end
 end

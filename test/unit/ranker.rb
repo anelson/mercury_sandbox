@@ -49,5 +49,55 @@ class RankerTest < Test::Unit::TestCase
     assert_equal(ranks[2], 2)
     assert_equal(ranks[3], 2)
   end
+
+  def test_percentile_empty
+    scores = []
+
+    percentiles = Ranker.scores_to_percentiles(scores)
+
+    assert_equal(0, percentiles.length)
+  end
+
+  def test_percentile_one
+    scores = [1]
+
+    percentiles = Ranker.scores_to_percentiles(scores)
+
+    assert_equal(1.0, percentiles[0])
+  end
+
+  def test_percentile_even_dist
+    scores = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+
+    percentiles = Ranker.scores_to_percentiles(scores)
+
+    assert_equal(0.10, percentiles[0])
+    assert_equal(0.20, percentiles[1])
+    assert_equal(0.30, percentiles[2])
+    assert_equal(0.40, percentiles[3])
+    assert_equal(0.50, percentiles[4])
+    assert_equal(0.60, percentiles[5])
+    assert_equal(0.70, percentiles[6])
+    assert_equal(0.80, percentiles[7])
+    assert_equal(0.90, percentiles[8])
+    assert_equal(1.0, percentiles[9])
+  end
+
+  def test_percentile_skewed_dist
+    scores = [1, 2, 3, 4, 5, 6, 10, 10, 10, 10]
+
+    percentiles = Ranker.scores_to_percentiles(scores)
+
+    assert_equal(0.10, percentiles[0])
+    assert_equal(0.20, percentiles[1])
+    assert_equal(0.30, percentiles[2])
+    assert_equal(0.40, percentiles[3])
+    assert_equal(0.50, percentiles[4])
+    assert_equal(0.60, percentiles[5])
+    assert_equal(1.0, percentiles[6])
+    assert_equal(1.0, percentiles[7])
+    assert_equal(1.0, percentiles[8])
+    assert_equal(1.0, percentiles[9])
+  end
 end
 
